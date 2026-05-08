@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maxitraining em Pauta – Ed. 48</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ECEAE4;font-family:Georgia,serif;color:#2A2420;padding:24px 12px 48px}
+.nl{max-width:700px;margin:0 auto;background:#FDFCFA;border-radius:2px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1)}
+.hd{background:#1B2A4A;padding:28px 36px 20px}
+.hd h1{color:#fff;font-size:22px;margin-bottom:4px}
+.hd .sub{color:#C49A3C;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.hd .meta{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);display:flex;gap:16px;align-items:center}
+.hd .eb{color:#C49A3C;font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.hd .dt{color:#fff;font-size:11px}
+.toc{background:#F5F4F1;padding:20px 36px;border-bottom:1px solid #E8E5DF}
+.toc p{font-family:Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7B1D2E;margin-bottom:10px}
+.toc ul{list-style:none}
+.toc li{padding:4px 0;font-family:Arial,sans-serif;font-size:13px}
+.toc a{color:#1B2A4A;text-decoration:none;font-weight:500}
+.intro{padding:24px 36px;border-bottom:1px solid #E8E5DF;font-size:15px;line-height:1.7}
+.intro p+p{margin-top:10px}
+.sec{border-bottom:1px solid #E8E5DF}
+.sh{padding:24px 36px 0}
+.ey{font-family:Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7B1D2E;margin-bottom:6px}
+.st{font-size:22px;font-weight:700;color:#1B2A4A;line-height:1.25;margin-bottom:16px}
+.pv{padding:0 36px 16px}
+.pv p{font-size:14px;line-height:1.6;color:#6B6560;font-style:italic;border-left:2px solid #E8E5DF;padding-left:12px}
+.tb{display:flex;align-items:center;gap:8px;margin:0 36px 20px;background:none;border:1.5px solid #7B1D2E;border-radius:20px;padding:7px 18px;font-family:Arial,sans-serif;font-size:12px;font-weight:600;color:#7B1D2E;cursor:pointer;width:fit-content}
+.tb:hover{background:#7B1D2E;color:#fff}
+.ar{font-size:9px;transition:transform .3s}
+.tb.open .ar{transform:rotate(180deg)}
+.col{display:none}
+.col.open{display:block}
+.ci{padding:0 36px 28px}
+.ai{width:100%;border-radius:4px;margin-bottom:20px;display:block}
+.ab p{font-size:14px;line-height:1.8;margin-bottom:14px}
+.ss{font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#7B1D2E;margin:20px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.ss.az{color:#2C3E6B}
+.bl{list-style:none;margin:6px 0 14px}
+.bl li{font-size:14px;line-height:1.6;padding-left:16px;position:relative;margin-bottom:6px}
+.bl li::before{content:'—';position:absolute;left:0;color:#C49A3C;font-weight:700}
+blockquote{border-left:3px solid #7B1D2E;margin:16px 0;padding:10px 16px;background:#F5F4F1;border-radius:0 4px 4px 0;font-style:italic;font-size:15px;color:#1B2A4A}
+.pq{margin:20px 0;padding:16px 20px;background:#1B2A4A;border-radius:4px;border-left:4px solid #C49A3C}
+.pql{font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C49A3C;margin-bottom:6px}
+.pq p{font-size:14px;font-style:italic;color:#fff;line-height:1.5}
+.src{font-family:Arial,sans-serif;font-size:11px;color:#6B6560;font-style:italic;margin-top:16px}
+.cta{margin:24px 36px;background:#F5F4F1;border:1px solid #E8E5DF;border-top:3px solid #7B1D2E;border-radius:4px;padding:24px}
+.ctat{font-size:17px;font-weight:700;color:#1B2A4A;margin-bottom:8px}
+.ctai{font-size:13px;line-height:1.6;margin-bottom:16px;color:#2A2420}
+.ci2{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.ic{width:30px;height:30px;background:#7B1D2E;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:13px}
+.ib strong{font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#1B2A4A;display:block;margin-bottom:2px}
+.ib span{font-size:12px;color:#6B6560;line-height:1.4}
+.div{height:1px;background:#E8E5DF;margin:14px 0}
+.ca{font-size:13px;line-height:1.6;color:#2A2420}
+.ft{background:#1B2A4A;padding:28px 36px}
+.fb{font-size:16px;color:#fff;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.fl{font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C49A3C;margin-bottom:3px}
+.fv{font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.7)}
+.fd{font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-bottom:16px}
+.fc{display:flex;flex-wrap:wrap;gap:10px}
+.cp{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 12px;font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.8);text-decoration:none}
+@media(max-width:560px){.fg{grid-template-columns:1fr}.hd,.intro,.toc,.sh,.pv,.cta,.ci,.ft{padding-left:20px;padding-right:20px}.tb{margin-left:20px}.cta{margin-left:20px;margin-right:20px}.st{font-size:19px}}
+</style>
+</head>
+<body>
+<article class="nl">
+
+<header class="hd">
+  <h1>Maxitraining em Pauta</h1>
+  <p class="sub">Educação · Liderança · Desenvolvimento</p>
+  <div class="meta">
+    <span class="eb">Edição Nº 48</span>
+    <span class="dt">08/05/26 · Publicação Semanal</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <p>Nesta edição</p>
+  <ul>
+    <li><a href="javascript:void(0)" onclick="navTo('s1')">→ Comunicação Interna: Por Que Informar Nunca Foi Suficiente</a></li>
+    <li><a href="javascript:void(0)" onclick="navTo('s2')">→ Tecnologia — Em breve</a></li>
+    <li><a href="javascript:void(0)" onclick="navTo('s3')">→ Notícias — Em breve</a></li>
+  </ul>
+</nav>
+
+<section class="intro">
+  <p>A comunicação interna aparece há décadas entre os pontos mais frágeis nas pesquisas de clima organizacional. Mas por quê? Nesta edição, exploramos um problema que vai muito além dos canais e das ferramentas — e que exige uma mudança profunda na forma como as organizações se relacionam com as suas pessoas.</p>
+</section>
+
+<!-- ARTIGO PRINCIPAL -->
+<section class="sec" id="s1">
+  <div class="sh">
+    <p class="ey">Artigo Principal</p>
+    <h2 class="st">Comunicação Interna: Por Que Informar Nunca Foi Suficiente</h2>
+  </div>
+  <div class="pv"><p>Décadas de pesquisas de clima apontam o mesmo problema: a comunicação interna continua sendo percebida como insuficiente — mesmo após grandes investimentos. O que está faltando?</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+
+        <p>Ao longo de décadas à frente de pesquisas de clima organizacional, um aspecto sempre me chamou a atenção: a comunicação interna invariavelmente aparecia entre os pontos considerados insuficientes pelos colaboradores. Independentemente do segmento, do porte da empresa ou do volume de investimentos realizados em canais e ações corporativas, a percepção recorrente era a mesma — <em>"precisamos melhorar a comunicação"</em>.</p>
+
+        <p>Confesso que esse padrão sempre me desafiou profundamente. Afinal, além da minha trajetória em Recursos Humanos, minha formação original é em Comunicação Social. E a pergunta que me acompanhava era inevitável: por que, mesmo com tantos avanços tecnológicos e novas ferramentas digitais, a comunicação corporativa continua sendo percebida como falha?</p>
+
+        <p>A resposta, percebo agora, estava diante de mim o tempo todo: <strong>comunicar não significa apenas informar.</strong> E durante muitos anos, boa parte das empresas tratou as duas coisas como sinônimos.</p>
+
+        <p class="ss">Do Canal à Conexão</p>
+
+        <p>Durante décadas, comunicação interna foi sinônimo de e-mails, murais, newsletters e reuniões periódicas. Havia uma lógica simples por trás disso: se a mensagem foi enviada, a comunicação aconteceu. Mas essa lógica ignora algo fundamental — a diferença entre transmitir e conectar.</p>
+
+        <p>Hoje, em um cenário marcado pelo trabalho híbrido, excesso de informações, inteligência artificial e hiperconectividade, o verdadeiro desafio deixou de ser "transmitir mensagens". Tornou-se gerar <strong>conexão, engajamento e significado</strong>.</p>
+
+        <p>Especialistas em comunicação corporativa reforçam exatamente essa visão: newsletters e comunicados internos eficientes não funcionam apenas como canais de informação. Funcionam como instrumentos de fortalecimento da cultura organizacional, transparência e senso de pertencimento.</p>
+
+        <p class="ss">O Que as Pessoas Realmente Desejam</p>
+
+        <p>A comunicação moderna precisa ir além dos comunicados tradicionais. As pesquisas mais recentes apontam que colaboradores engajados querem:</p>
+
+        <ul class="bl">
+          <li>Reconhecimento genuíno — ver histórias reais de pessoas reais</li>
+          <li>Conteúdo relevante e personalizado para sua realidade</li>
+          <li>Linguagem humana, não corporativa</li>
+          <li>Espaços reais para dar feedback e ser ouvido</li>
+          <li>Interatividade — não apenas consumir, mas participar</li>
+        </ul>
+
+        <p>As pessoas não desejam apenas receber informação. <strong>Elas desejam sentir-se parte dela.</strong></p>
+
+        <blockquote>"Modernizar os canais sem modernizar a cultura comunicacional não resolve nada. Resolve a forma, mas ignora o conteúdo que importa."</blockquote>
+
+        <p class="ss">A Virada: De Monólogo a Diálogo</p>
+
+        <p>Não por acaso, empresas mais avançadas em comunicação interna vêm abandonando modelos excessivamente formais e adotando estratégias mais próximas da experiência digital que os profissionais já vivenciam fora do ambiente corporativo. O colaborador atual está acostumado a conteúdos rápidos, personalizados, interativos e visualmente atrativos. Quando a comunicação empresarial ignora essa transformação, perde relevância imediatamente.</p>
+
+        <p>Há outro ponto igualmente importante: comunicação interna eficiente não pode ser construída exclusivamente de cima para baixo. O colaborador moderno quer participação. Quer opinar, interagir, sugerir e ser ouvido. A comunicação precisa deixar de ser unilateral para tornar-se genuinamente conversacional.</p>
+
+        <p>Isso explica por que tantas pesquisas de clima continuam apontando fragilidades na comunicação mesmo após grandes investimentos tecnológicos: as empresas modernizaram os <em>canais</em>, mas não a <em>cultura comunicacional</em>.</p>
+
+        <p class="ss">A Newsletter Reinventada</p>
+
+        <p>Dentro desse contexto, as newsletters corporativas ganham novamente relevância estratégica. Curiosamente, em plena era das redes sociais e da inteligência artificial, o conceito de newsletter ressurge fortalecido — mas profundamente reinventado. Agora, mais visual, segmentada, humanizada e interativa.</p>
+
+        <p>A verdade é que comunicação corporativa eficaz exige coerência, transparência, escuta ativa e liderança preparada para dialogar. Nenhuma plataforma, sozinha, resolve problemas de confiança organizacional.</p>
+
+        <div class="pq">
+          <p class="pql">Reflexão para Líderes</p>
+          <p>Na sua organização, as pessoas recebem informação — ou participam dela? A resposta a essa pergunta revela muito sobre a saúde da sua cultura comunicacional.</p>
+        </div>
+
+        <p>Talvez seja exatamente por isso que, décadas depois, a comunicação interna continue sendo tema permanente nas pesquisas de clima: porque, no fundo, comunicar continua sendo uma das competências mais complexas — e mais humanas — da gestão contemporânea.</p>
+
+        <p class="src">Fontes: ContactMonkey — Employee Newsletter Content Strategies · Firstup — 25 Employee Newsletter Ideas to Engage Your Workplace</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <p class="ctat">Domine a Arte de Apresentar e Transforme sua Carreira</p>
+  <p class="ctai">Comunicar bem é a competência que diferencia líderes que inspiram daqueles que apenas informam. A Mentoria Premium do Prof. Hilbernon prepara você para isso.</p>
+  <div class="ci2"><div class="ic">①</div><div class="ib"><strong>Sessões Individuais ao Vivo</strong><span>Exercícios práticos e feedback detalhado a cada sessão.</span></div></div>
+  <div class="ci2"><div class="ic">②</div><div class="ib"><strong>Estratégia Personalizada</strong><span>Plano focado nos seus desafios — persuasão, estruturação e presença executiva.</span></div></div>
+  <div class="ci2"><div class="ic">③</div><div class="ib"><strong>Resultado desde a 1ª Semana</strong><span>+300 profissionais transformados. 98% de satisfação.</span></div></div>
+  <div class="div"></div>
+  <p class="ca"><strong>Fale com o Prof. Hilbernon:</strong> WhatsApp <a href="https://wa.me/5521996861009" style="color:#7B1D2E;font-weight:600">+55 21 99686-1009</a> · <a href="https://talk-pro-rise.lovable.app" style="color:#7B1D2E;font-weight:600">talk-pro-rise.lovable.app</a></p>
+</div>
+
+<!-- SEÇÃO 2 -->
+<section class="sec" id="s2">
+  <div class="sh">
+    <p class="ey">Seção 2 — Tecnologia</p>
+    <h2 class="st">Plataformas de Comunicação Interna de Nova Geração: O Fim da Intranet como Conhecemos</h2>
+  </div>
+  <div class="pv"><p>Intranets lentas, e-mails ignorados e murais esquecidos. A nova geração de plataformas de comunicação interna chegou para substituir tudo isso — com experiências mobile-first, personalizadas e verdadeiramente interativas.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+        <p>Durante décadas, a intranet corporativa foi o símbolo da comunicação interna nas organizações. Um portal centralizado, acessado pelo computador, repleto de documentos, avisos e políticas que poucos liam. O modelo funcionou — até deixar de funcionar.</p>
+        <p>A transformação do ambiente de trabalho, acelerada pelo crescimento do trabalho híbrido e pela chegada de uma nova geração de profissionais digitalmente nativos, tornou esse modelo obsoleto. Hoje, uma nova geração de plataformas de comunicação interna está redefinindo completamente a forma como as organizações se relacionam com seus colaboradores.</p>
+
+        <p class="ss">O Que São as Plataformas de Nova Geração</p>
+        <p>Ferramentas como <strong>Staffbase</strong>, <strong>Firstup</strong> e <strong>Blink</strong> representam uma ruptura com o modelo tradicional. Em vez de portais estáticos acessados via desktop, essas plataformas oferecem experiências mobile-first — projetadas para o smartphone, que é hoje o principal dispositivo de comunicação de boa parte da força de trabalho global, especialmente em setores como varejo, saúde, logística e manufatura.</p>
+        <p>O diferencial não está apenas no dispositivo, mas na lógica por trás da comunicação:</p>
+        <ul class="bl">
+          <li><strong>Personalização por perfil</strong> — cada colaborador recebe conteúdos relevantes para sua função, localidade e momento na organização</li>
+          <li><strong>Interatividade real</strong> — curtidas, comentários, enquetes e reações tornam a comunicação bidirecional</li>
+          <li><strong>Segmentação inteligente</strong> — mensagens direcionadas por área, cargo, turno ou unidade, eliminando o ruído do "comunicado geral"</li>
+          <li><strong>Integração com outras ferramentas</strong> — conexão nativa com Microsoft Teams, Slack, SAP e sistemas de RH</li>
+          <li><strong>Analytics de engajamento</strong> — dados em tempo real sobre quem leu, reagiu e interagiu com cada comunicado</li>
+        </ul>
+
+        <p class="ss">Por Que Isso Importa para o RH e para a Liderança</p>
+        <p>Segundo pesquisa da Gartner, organizações que adotam plataformas modernas de comunicação interna registram aumento significativo no engajamento dos colaboradores e redução na rotatividade — especialmente entre profissionais de linha de frente, historicamente os menos alcançados pelos canais tradicionais.</p>
+        <p>A Forrester Research aponta que empresas com comunicação interna eficiente têm colaboradores até <strong>2,8 vezes mais propensos a serem altamente engajados</strong> do que aquelas com comunicação fragmentada ou excessivamente formal.</p>
+        <p>Para líderes de RH, isso representa uma oportunidade estratégica: deixar de encarar a comunicação interna como um problema operacional e começar a tratá-la como uma alavanca de cultura, retenção e performance.</p>
+
+        <p class="ss">O Cuidado Necessário</p>
+        <p>A adoção dessas plataformas, porém, exige atenção. Tecnologia sem estratégia resulta em mais ruído, não em mais conexão. Antes de escolher uma ferramenta, as organizações precisam responder perguntas fundamentais: qual é a nossa cultura comunicacional hoje? Estamos prontos para uma comunicação mais horizontal e transparente? A liderança está preparada para dialogar — e não apenas para transmitir?</p>
+
+        <div class="pq">
+          <p class="pql">Insight Maxitraining</p>
+          <p>A melhor plataforma de comunicação interna é aquela que a sua organização está culturalmente preparada para usar. Tecnologia amplifica — para o bem ou para o mal — o que já existe na cultura.</p>
+        </div>
+
+        <p>O futuro da comunicação interna não está em escolher entre e-mail, intranet ou aplicativo. Está em construir uma cultura onde comunicar seja um ato genuíno de conexão — independentemente do canal.</p>
+        <p class="src">Fontes: Gartner — Magic Quadrant for Intranet Packaged Solutions · Forrester Research — The Employee Experience Imperative · Staffbase Blog — The Future of Internal Communications</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section class="sec" id="s3">
+  <div class="sh">
+    <p class="ey">Seção 3 — Notícias</p>
+    <h2 class="st">Comunicação Interna em Foco: O Que os Dados e os Eventos Revelam</h2>
+  </div>
+  <div class="pv"><p>Da pesquisa acadêmica ao relatório global, passando pelo evento corporativo — o que está acontecendo no mundo da comunicação interna agora.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+
+        <!-- NOTÍCIA 1 -->
+        <p class="ss">🔎 ABRH-PR lança estudo inédito sobre comunicação interna nas empresas paranaenses</p>
+        <p>A ABRH-PR, em parceria com a Universidade Positivo, abriu inscrições para mapear práticas, desafios e tendências da comunicação interna conduzida por profissionais de RH no Paraná. A iniciativa é liderada pela jornalista e professora Patrícia Giannini, especialista em comunicação organizacional — e representa um passo importante para compreender como as organizações brasileiras estão, de fato, gerindo a comunicação com seus colaboradores.</p>
+        <p style="margin-bottom:6px"><em>Fonte: ABRH-PR — Abril 2026</em></p>
+        <a href="https://abrh-pr.org.br/estudo-inedito-mapeia-a-comunicacao-interna-nas-empresas-do-parana-com-foco-no-papel-do-rh/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:28px">Veja mais →</a>
+
+        <hr style="border:none;border-top:1px solid #E8E5DF;margin-bottom:24px">
+
+        <!-- NOTÍCIA 2 -->
+        <p class="ss">📊 Pesquisa global revela estagnação na comunicação interna em 2026</p>
+        <p>O relatório <em>State of Internal Communications 2026</em>, produzido pela Simpplr com base em 448 profissionais da área, revela um dado preocupante: apenas 33% afirmam que sua função melhorou em relação ao ano anterior — queda expressiva frente aos 54% registrados em 2025. O estudo aponta que a comunicação interna vive um momento de plateau, onde credibilidade já foi conquistada, mas capacidade de escala e medição de impacto ainda são os grandes gargalos. Para 96% dos executivos C-suite, o investimento em comunicação interna é prioritário — mas esse apoio ainda não se traduz em recursos concretos para as equipes.</p>
+        <p style="margin-bottom:6px"><em>Fonte: Simpplr — State of Internal Communications 2026</em></p>
+        <a href="https://www.simpplr.com/blog/state-of-internal-communications-2026/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:28px">Veja mais →</a>
+
+        <hr style="border:none;border-top:1px solid #E8E5DF;margin-bottom:24px">
+
+        <!-- NOTÍCIA 3 -->
+        <p class="ss">⚠️ 61% das equipes de comunicação interna não têm framework formal para gestão da mudança</p>
+        <p>Mesmo sendo a competência mais desejada pelos profissionais da área, a gestão da mudança ainda carece de estrutura formal na maioria das organizações. É o que aponta o <em>Employee Communications Report 2026</em>, da Gallagher. O dado é revelador: as empresas reconhecem a importância de comunicar bem os processos de transformação, mas pouquíssimas criaram metodologias consistentes para isso. O resultado é uma comunicação reativa, improvisada e frequentemente ineficaz nos momentos em que mais importa — exatamente quando colaboradores mais precisam de clareza, contexto e confiança.</p>
+        <p style="margin-bottom:6px"><em>Fonte: Gallagher — Employee Communications Report 2026</em></p>
+        <a href="https://www.ajg.com/us/news-and-insights/2026/january/2026-employee-communications-report/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:8px">Veja mais →</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="ft">
+  <p class="fb">Maxitraining em Pauta</p>
+  <div class="fg">
+    <div><p class="fl">Editor</p><p class="fv">Hilbernon M S Neto</p></div>
+    <div><p class="fl">Periodicidade</p><p class="fv">Semanal</p></div>
+    <div><p class="fl">Marketing</p><p class="fv">Bianca Omena Maximiano</p></div>
+    <div><p class="fl">Plataforma</p><p class="fv">LinkedIn Newsletter</p></div>
+  </div>
+  <p class="fd"><strong style="color:rgba(255,255,255,.6)">Disclaimer</strong> — Conteúdo informativo e educacional. Dados tratados em conformidade com a LGPD.</p>
+  <div class="fc">
+    <a href="mailto:hilbermaxitraining@gmail.com" class="cp">✉ hilbermaxitraining@gmail.com</a>
+    <a href="tel:+5521996861009" class="cp">📞 +55 21 99686-1009</a>
+    <a href="#" class="cp">in LinkedIn</a>
+    <a href="#" class="cp">@ prof_hilbernon</a>
+  </div>
+</footer>
+
+</article>
+<script>
+function tog(b){
+  var c=b.nextElementSibling,o=c.classList.contains('open'),t=b.querySelector('.bt');
+  c.classList.toggle('open');b.classList.toggle('open');
+  t.textContent=o?'Ver mais':'Ver menos';
+}
+function navTo(id){
+  var s=document.getElementById(id);
+  if(!s)return;
+  var c=s.querySelector('.col'),b=s.querySelector('.tb');
+  if(c&&b&&!c.classList.contains('open')){
+    c.classList.add('open');b.classList.add('open');
+    b.querySelector('.bt').textContent='Ver menos';
+  }
+  setTimeout(function(){s.scrollIntoView({behavior:'smooth',block:'start'})},300);
+}
+</script>
+</body>
+</html>
