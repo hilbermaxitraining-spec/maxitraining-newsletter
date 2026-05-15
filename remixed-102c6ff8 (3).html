@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maxitraining em Pauta – Ed. 49</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ECEAE4;font-family:Georgia,serif;color:#2A2420;padding:24px 12px 48px}
+.nl{max-width:700px;margin:0 auto;background:#FDFCFA;border-radius:2px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1)}
+.hd{background:#1B2A4A;padding:28px 36px 20px}
+.hd h1{color:#fff;font-size:22px;margin-bottom:4px}
+.hd .sub{color:#C49A3C;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.hd .meta{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);display:flex;gap:16px;align-items:center}
+.hd .eb{color:#C49A3C;font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.hd .dt{color:#fff;font-size:11px}
+.toc{background:#F5F4F1;padding:20px 36px;border-bottom:1px solid #E8E5DF}
+.toc p{font-family:Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7B1D2E;margin-bottom:10px}
+.toc ul{list-style:none}
+.toc li{padding:4px 0;font-family:Arial,sans-serif;font-size:13px}
+.toc a{color:#1B2A4A;text-decoration:none;font-weight:500}
+.intro{padding:24px 36px;border-bottom:1px solid #E8E5DF;font-size:15px;line-height:1.7}
+.intro p+p{margin-top:10px}
+.sec{border-bottom:1px solid #E8E5DF}
+.sh{padding:24px 36px 0}
+.ey{font-family:Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7B1D2E;margin-bottom:6px}
+.st{font-size:22px;font-weight:700;color:#1B2A4A;line-height:1.25;margin-bottom:16px}
+.pv{padding:0 36px 16px}
+.pv p{font-size:14px;line-height:1.6;color:#6B6560;font-style:italic;border-left:2px solid #E8E5DF;padding-left:12px}
+.tb{display:flex;align-items:center;gap:8px;margin:0 36px 20px;background:none;border:1.5px solid #7B1D2E;border-radius:20px;padding:7px 18px;font-family:Arial,sans-serif;font-size:12px;font-weight:600;color:#7B1D2E;cursor:pointer;width:fit-content}
+.tb:hover{background:#7B1D2E;color:#fff}
+.ar{font-size:9px;transition:transform .3s}
+.tb.open .ar{transform:rotate(180deg)}
+.col{display:none}
+.col.open{display:block}
+.ci{padding:0 36px 28px}
+.ab p{font-size:14px;line-height:1.8;margin-bottom:14px}
+.ss{font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#7B1D2E;margin:20px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.ss.az{color:#2C3E6B}
+.bl{list-style:none;margin:6px 0 14px}
+.bl li{font-size:14px;line-height:1.6;padding-left:16px;position:relative;margin-bottom:6px}
+.bl li::before{content:'—';position:absolute;left:0;color:#C49A3C;font-weight:700}
+blockquote{border-left:3px solid #7B1D2E;margin:16px 0;padding:10px 16px;background:#F5F4F1;border-radius:0 4px 4px 0;font-style:italic;font-size:15px;color:#1B2A4A}
+.pq{margin:20px 0;padding:16px 20px;background:#1B2A4A;border-radius:4px;border-left:4px solid #C49A3C}
+.pql{font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C49A3C;margin-bottom:6px}
+.pq p{font-size:14px;font-style:italic;color:#fff;line-height:1.5}
+.src{font-family:Arial,sans-serif;font-size:11px;color:#6B6560;font-style:italic;margin-top:16px}
+.cta{margin:24px 36px;background:#F5F4F1;border:1px solid #E8E5DF;border-top:3px solid #7B1D2E;border-radius:4px;padding:24px}
+.ctat{font-size:17px;font-weight:700;color:#1B2A4A;margin-bottom:8px}
+.ctai{font-size:13px;line-height:1.6;margin-bottom:16px;color:#2A2420}
+.ci2{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.ic{width:30px;height:30px;background:#7B1D2E;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:13px}
+.ib strong{font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#1B2A4A;display:block;margin-bottom:2px}
+.ib span{font-size:12px;color:#6B6560;line-height:1.4}
+.div{height:1px;background:#E8E5DF;margin:14px 0}
+.ca{font-size:13px;line-height:1.6;color:#2A2420}
+.ft{background:#1B2A4A;padding:28px 36px}
+.fb{font-size:16px;color:#fff;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.fl{font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C49A3C;margin-bottom:3px}
+.fv{font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.7)}
+.fd{font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-bottom:16px}
+.fc{display:flex;flex-wrap:wrap;gap:10px}
+.cp{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 12px;font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.8);text-decoration:none}
+@media(max-width:560px){.fg{grid-template-columns:1fr}.hd,.intro,.toc,.sh,.pv,.cta,.ci,.ft{padding-left:20px;padding-right:20px}.tb{margin-left:20px}.cta{margin-left:20px;margin-right:20px}.st{font-size:19px}}
+</style>
+</head>
+<body>
+<article class="nl">
+
+<header class="hd">
+  <h1>Maxitraining em Pauta</h1>
+  <p class="sub">Educação · Liderança · Desenvolvimento</p>
+  <div class="meta">
+    <span class="eb">Edição Nº 49</span>
+    <span class="dt">15/05/26 · Publicação Semanal</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <p>Nesta edição</p>
+  <ul>
+    <li><a href="javascript:void(0)" onclick="navTo('s1')">→ Employer Branding: Por Que as Empresas Precisam Ser Desejadas, Não Apenas Conhecidas</a></li>
+    <li><a href="javascript:void(0)" onclick="navTo('s2')">→ Tecnologia — Ferramentas de IA para Comunicação Interna</a></li>
+    <li><a href="javascript:void(0)" onclick="navTo('s3')">→ Notícias — Employer Branding e RH em Foco: O Que os Dados e os Eventos Revelam</a></li>
+  </ul>
+</nav>
+
+<section class="intro">
+  <p>Ser conhecida não é o mesmo que ser desejada. Nesta edição, exploramos como o Employer Branding se tornou um imperativo estratégico para organizações que querem atrair e reter os melhores talentos — e o que o RH precisa fazer para construir uma marca empregadora autêntica e consistente.</p>
+  <p>Na seção de tecnologia, como o Microsoft Copilot, o Notion AI e o Slack AI estão transformando a comunicação interna das equipes. E nas notícias, três dados que revelam o estado atual do Employer Branding no Brasil e no mundo — com links diretos para as fontes originais.</p>
+</section>
+
+<!-- ARTIGO PRINCIPAL -->
+<section class="sec" id="s1">
+  <div class="sh">
+    <p class="ey">Artigo Principal</p>
+    <h2 class="st">Employer Branding: Por Que as Empresas Precisam Ser Desejadas, Não Apenas Conhecidas</h2>
+  </div>
+  <div class="pv"><p>Em um mercado de trabalho cada vez mais competitivo e amplificado pelas redes sociais, a marca empregadora deixou de ser um diferencial para se tornar uma condição de sobrevivência. Empresas que não a constroem ativamente perdem os melhores talentos — muitas vezes, antes mesmo de conseguir uma entrevista.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+        <p>Há uma diferença fundamental entre uma empresa que as pessoas conhecem e uma empresa que as pessoas desejam trabalhar. Durante muitos anos, as organizações investiram pesadamente em reputação de marca — voltada ao consumidor, ao mercado, aos acionistas. Mas havia um público igualmente estratégico sendo negligenciado: os talentos.</p>
+        <p>Esse cenário mudou. E mudou de forma irreversível.</p>
+        <p>Em um mercado de trabalho cada vez mais competitivo, escasso em competências críticas e amplificado pelas redes sociais, a marca empregadora deixou de ser um diferencial para se tornar uma condição de sobrevivência organizacional. Empresas que não constroem ativamente sua reputação como empregadoras simplesmente perdem os melhores profissionais — muitas vezes, antes mesmo de conseguir uma entrevista.</p>
+
+        <p class="ss">Do Marketing ao RH: A Convergência Inevitável</p>
+        <p>Employer Branding é, em essência, a gestão da percepção que o mercado de talentos tem de uma organização como lugar para trabalhar. Mas engana-se quem pensa que esse é um tema exclusivo do Marketing ou da Comunicação. Na prática, ele nasce e se sustenta dentro do RH — na cultura real, nas políticas de gestão de pessoas, nas histórias que os próprios colaboradores contam dentro e fora da empresa.</p>
+        <p>E aqui está o ponto mais sensível: a marca empregadora não é o que a empresa diz sobre si mesma. É o que as pessoas dizem sobre ela quando a empresa não está ouvindo.</p>
+
+        <blockquote>"A marca empregadora não é o que a empresa diz sobre si mesma. É o que as pessoas dizem sobre ela quando a empresa não está ouvindo."</blockquote>
+
+        <p>Plataformas como Glassdoor, LinkedIn e até o Instagram transformaram radicalmente essa dinâmica. Um colaborador insatisfeito, um candidato com experiência negativa no recrutamento ou um ex-funcionário que se sentiu desvalorizado têm hoje um alcance que nenhuma campanha de endomarketing consegue neutralizar.</p>
+
+        <p class="ss az">Os Pilares de uma Marca Empregadora Autêntica</p>
+        <ul class="bl">
+          <li><strong>EVP — Employee Value Proposition:</strong> a proposta de valor real que a empresa oferece. Não o que está no site de carreiras, mas o que é vivenciado no dia a dia — cultura, desenvolvimento, liderança, propósito e benefícios.</li>
+          <li><strong>Experiência do Candidato:</strong> o processo seletivo é o primeiro momento em que o talento experimenta a cultura. Uma experiência desrespeitosa ou impessoal comunica muito mais do que qualquer campanha.</li>
+          <li><strong>Voz dos Colaboradores:</strong> os melhores embaixadores da marca são os próprios funcionários. Programas que amplificam essa voz — de forma genuína — geram credibilidade que nenhum anúncio compra.</li>
+          <li><strong>Consistência entre discurso e prática:</strong> nada destrói uma marca empregadora mais rapidamente do que a distância entre o que a empresa promete e o que ela entrega.</li>
+        </ul>
+
+        <p class="ss">O Papel Estratégico do RH</p>
+        <p>Nesse contexto, o RH assume um papel que vai muito além do recrutamento. Torna-se o guardião e o arquiteto da experiência do colaborador — desde o momento em que o candidato encontra uma vaga até o dia em que deixa a organização.</p>
+        <p>Isso exige uma mudança de mentalidade profunda: deixar de pensar apenas em preencher posições e começar a pensar em construir relações. Deixar de medir apenas tempo de contratação e começar a medir qualidade da experiência, engajamento e reputação no mercado.</p>
+        <p>Empresas como Nubank, Magazine Luiza e Ambev no Brasil — e Google, Patagonia e HubSpot globalmente — são referências em Employer Branding não porque investiram fortunas em campanhas, mas porque construíram culturas que as pessoas genuinamente admiram e desejam fazer parte.</p>
+
+        <p class="ss">O Erro Mais Comum</p>
+        <p>O maior equívoco que as organizações cometem é tratar o Employer Branding como um projeto de comunicação — algo que se faz uma vez, com início, meio e fim. Na prática, é uma construção contínua, alimentada diariamente pelas decisões de liderança, pelas políticas de RH e, sobretudo, pela experiência real de quem trabalha ali.</p>
+        <p>Não existe campanha capaz de compensar uma cultura tóxica. Mas uma cultura extraordinária se torna, por si só, a melhor campanha que uma empresa pode ter.</p>
+
+        <div class="pq">
+          <p class="pql">Reflexão para Líderes</p>
+          <p>Se os seus colaboradores fossem convidados agora para avaliar publicamente a experiência de trabalhar na sua empresa, o que eles diriam? A resposta a essa pergunta é o ponto de partida de qualquer estratégia séria de Employer Branding.</p>
+        </div>
+
+        <p class="src">Fontes: LinkedIn Talent Solutions — Global Talent Trends 2026 · Glassdoor — Employer Branding Statistics · SHRM — Building a Compelling Employer Brand</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DE DESTAQUE -->
+<div style="margin:24px 36px 0;background:#1B2A4A;border-left:4px solid #C49A3C;border-radius:4px;padding:16px 20px;">
+  <p style="font-family:Georgia,serif;font-size:14px;font-style:italic;color:#fff;line-height:1.6;margin:0;">"A forma como você se comunica define como você é percebido — como líder, como profissional, como marca."</p>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <p class="ctat">Sua Comunicação é Parte da Sua Marca — Pessoal e Profissional</p>
+  <p class="ctai">Líderes que comunicam bem constroem equipes mais engajadas, marcas mais desejadas e carreiras mais sólidas. A Mentoria Premium do Prof. Hilbernon foi desenvolvida para isso.</p>
+  <div class="ci2"><div class="ic">①</div><div class="ib"><strong>Diagnóstico de Comunicação</strong><span>Identificamos seus pontos de travamento e construímos um plano sob medida para o seu perfil e contexto.</span></div></div>
+  <div class="ci2"><div class="ic">②</div><div class="ib"><strong>Sessões Práticas ao Vivo</strong><span>Simulações reais, feedback imediato e técnicas aplicáveis na próxima reunião ou apresentação.</span></div></div>
+  <div class="ci2"><div class="ic">③</div><div class="ib"><strong>Evolução Mensurável</strong><span>Mais de 300 profissionais transformados. Média de 98% de satisfação. Resultado desde a 1ª sessão.</span></div></div>
+  <div class="div"></div>
+  <p class="ca"><strong>Agende uma conversa gratuita com o Prof. Hilbernon e descubra como a comunicação pode ser o seu maior diferencial competitivo.</strong><br><br>WhatsApp <a href="https://wa.me/5521996861009" style="color:#7B1D2E;font-weight:600">+55 21 99686-1009</a> · <a href="https://talk-pro-rise.lovable.app" style="color:#7B1D2E;font-weight:600">talk-pro-rise.lovable.app</a></p>
+</div>
+
+<!-- SEÇÃO 2 -->
+<section class="sec" id="s2">
+  <div class="sh">
+    <p class="ey">Seção 2 — Tecnologia</p>
+    <h2 class="st">Ferramentas de IA para Comunicação Interna: Quando a Tecnologia Começa a Falar pela Empresa</h2>
+  </div>
+  <div class="pv"><p>Microsoft Copilot, Notion AI e Slack AI já fazem parte do cotidiano de milhares de equipes — e estão redefinindo o que significa comunicar internamente com eficiência, clareza e escala.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+        <p>Por muito tempo, a comunicação interna dependia quase exclusivamente de dois recursos: tempo e pessoas. Alguém precisava redigir o comunicado, resumir a ata da reunião, responder às dúvidas dos colaboradores, personalizar a mensagem para cada área. Um trabalho importante, mas intensivo — e frequentemente subestimado dentro das organizações.</p>
+        <p>A Inteligência Artificial está mudando essa equação de forma silenciosa e acelerada.</p>
+        <p>Ferramentas como <strong>Microsoft Copilot</strong>, <strong>Notion AI</strong> e <strong>Slack AI</strong> já fazem parte do cotidiano de milhares de equipes ao redor do mundo — e estão redefinindo o que significa comunicar internamente com eficiência, clareza e escala.</p>
+
+        <p class="ss">O Que Essas Ferramentas Fazem na Prática</p>
+        <p>A geração anterior de tecnologia corporativa automatizava tarefas repetitivas. A nova geração vai além: ela compreende contexto, adapta linguagem e antecipa necessidades.</p>
+        <p>O <strong>Microsoft Copilot</strong>, integrado ao ecossistema Microsoft 365, resume automaticamente reuniões no Teams, extrai os principais pontos de decisão, lista as ações definidas e redige o e-mail de follow-up — tudo em segundos, sem que ninguém precise abrir um bloco de notas durante a reunião.</p>
+        <p>O <strong>Notion AI</strong> transforma bases de conhecimento em assistentes ativos. Em vez de o colaborador navegar por dezenas de páginas para encontrar uma política interna, ele simplesmente faz a pergunta — e recebe a resposta contextualizada, extraída diretamente do conteúdo da empresa.</p>
+        <p>O <strong>Slack AI</strong> resume conversas longas em canais movimentados, identifica os tópicos mais relevantes do dia e sugere respostas com base no histórico de interações. Para equipes híbridas e distribuídas globalmente, isso representa redução significativa no tempo gasto tentando "se atualizar".</p>
+
+        <p class="ss">O Impacto Real na Comunicação Interna</p>
+        <p>Segundo dados do <strong>Harvard Business Review</strong>, profissionais gastam em média 28% da semana gerenciando e-mails e participando de reuniões — boa parte delas sem conclusão clara. A IA aplicada à comunicação interna ataca diretamente esse problema: menos ruído, mais sinal.</p>
+        <p>Para as equipes de RH e Comunicação Interna, o impacto é ainda mais estratégico. Comunicados que antes levavam horas para ser redigidos e personalizados por área podem ser gerados em minutos — com tom adequado, linguagem adaptada ao público e estrutura otimizada para engajamento.</p>
+        <p>O <strong>Microsoft Blog</strong> aponta que empresas que adotaram o Copilot relataram redução de até 40% no tempo dedicado a tarefas de comunicação e documentação — liberando as equipes para o que realmente exige julgamento humano: relacionamento, estratégia e criatividade.</p>
+
+        <p class="ss az">O Que Ainda É Território Humano</p>
+        <p>Há um limite claro — e importante — para o que a IA pode fazer pela comunicação interna. Ela pode resumir, redigir, personalizar e distribuir. Não pode, porém, construir confiança, sentir o clima da organização ou tomar decisões sensíveis sobre como comunicar uma reestruturação, uma demissão em massa ou uma mudança cultural profunda.</p>
+        <p>A IA é uma ferramenta extraordinária para amplificar a capacidade comunicativa das equipes. Mas a inteligência emocional, o julgamento estratégico e a autenticidade que tornam uma comunicação verdadeiramente eficaz continuam sendo — e precisam continuar sendo — responsabilidade humana.</p>
+
+        <div class="pq">
+          <p class="pql">Reflexão para Líderes</p>
+          <p>Sua equipe ainda gasta horas em tarefas que a IA poderia realizar em minutos? Vale perguntar: o que faríamos com esse tempo recuperado?</p>
+        </div>
+
+        <p class="src">Fontes: Microsoft Blog — The Impact of Microsoft Copilot on Workplace Productivity · Slack Newsroom — AI Features in Slack · Harvard Business Review — Collaborative Overload</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section class="sec" id="s3">
+  <div class="sh">
+    <p class="ey">Seção 3 — Notícias</p>
+    <h2 class="st">Employer Branding e RH em Foco: O Que os Dados e os Eventos Revelam</h2>
+  </div>
+  <div class="pv"><p>Da conferência internacional ao levantamento de mercado — três notícias que mostram como o Employer Branding está no centro da agenda estratégica de RH em 2026.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+
+        <!-- NOTÍCIA 1 -->
+        <p class="ss">📅 ABRH-SP realiza 6ª Semana de Tecnologia e Inovação para RH — de 19 a 22 de maio</p>
+        <p>A ABRH-SP promove, de 19 a 22 de maio, a 6ª Semana de Tecnologia e Inovação para RH, com o tema central <em>"Trabalho reimaginado: IA, confiança e o futuro humano do RH — Como redesenhar trabalho, liderança e experiência humana na era da IA?"</em>. O evento, em formato híbrido, combina webinars e workshops online nos dias 19, 20 e 21, com encerramento presencial no dia 22, no Inovabra Habitat (Bradesco), em São Paulo. A programação inclui sessões sobre como fazer a IA sair do experimento e entrar na rotina do RH, a nova arquitetura do trabalho com agentes digitais e técnicas de prompting aplicadas à gestão de pessoas.</p>
+        <p style="margin-bottom:6px"><em>Fonte: ABRH-SP — Maio 2026</em></p>
+        <a href="https://abrhsp.org.br/noticias/abrh-sp-promove-a-semana-de-tecnologia-e-inovacao-para-rh-em-formato-hibrido/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:28px">Veja mais →</a>
+
+        <hr style="border:none;border-top:1px solid #E8E5DF;margin-bottom:24px">
+
+        <!-- NOTÍCIA 2 -->
+        <p class="ss">📊 75% dos profissionais verificam a reputação da marca empregadora antes de se candidatar</p>
+        <p>Segundo dados do LinkedIn apresentados na Employer Branding Conference 2026, três em cada quatro profissionais verificam a reputação da marca empregadora antes de se candidatar a uma vaga. O levantamento também revela que empresas com uma proposta de valor ao empregado (EVP) bem estruturada podem reduzir em até 43% o custo de atração de talentos. O evento, criado pela Talent Portugal em 2016, consolidou-se como referência global na discussão sobre marca empregadora como estratégia central para empresas que buscam liderar as transformações do mundo corporativo.</p>
+        <p style="margin-bottom:6px"><em>Fonte: Employer Branding Conference 2026 / LinkedIn</em></p>
+        <a href="https://concursonews.com/2026/04/sua-marca-empregadora-esta-pronta-para-o-mercado-o-que-a-employer-branding-conference-2026-mostrou/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:28px">Veja mais →</a>
+
+        <hr style="border:none;border-top:1px solid #E8E5DF;margin-bottom:24px">
+
+        <!-- NOTÍCIA 3 -->
+        <p class="ss">📈 51% dos líderes de RH planejam expandir investimentos em Employer Branding em 2026</p>
+        <p>Mais da metade dos líderes de RH pretendem iniciar ou expandir seus investimentos em marca empregadora em 2026, segundo levantamento recente do mercado. O dado reflete uma virada estratégica significativa: o Employer Branding deixou de ser percebido como ação de marketing para se tornar um pilar de retenção, cultura e competitividade organizacional. O estudo aponta ainda que 83% dos profissionais pesquisam avaliações sobre a empresa antes de se candidatar — o que torna a reputação online um dos principais filtros iniciais no processo de atração de talentos.</p>
+        <p style="margin-bottom:6px"><em>Fonte: Glassdoor / LinkedIn Business</em></p>
+        <a href="https://www.ticket.com.br/blog/pessoas-e-gestao/o-que-e-employer-branding/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:8px">Veja mais →</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="ft">
+  <p class="fb">Maxitraining em Pauta</p>
+  <div class="fg">
+    <div><p class="fl">Editor</p><p class="fv">Hilbernon M S Neto</p></div>
+    <div><p class="fl">Periodicidade</p><p class="fv">Semanal</p></div>
+    <div><p class="fl">Marketing</p><p class="fv">Bianca Omena Maximiano</p></div>
+    <div><p class="fl">Plataforma</p><p class="fv">LinkedIn Newsletter</p></div>
+  </div>
+  <p class="fd"><strong style="color:rgba(255,255,255,.6)">Disclaimer</strong> — Conteúdo informativo e educacional. Dados tratados em conformidade com a LGPD.</p>
+  <div class="fc">
+    <a href="mailto:hilbermaxitraining@gmail.com" class="cp">✉ hilbermaxitraining@gmail.com</a>
+    <a href="tel:+5521996861009" class="cp">📞 +55 21 99686-1009</a>
+    <a href="#" class="cp">in LinkedIn</a>
+    <a href="#" class="cp">@ prof_hilbernon</a>
+  </div>
+</footer>
+
+</article>
+<script>
+function tog(b){
+  var c=b.nextElementSibling,o=c.classList.contains('open'),t=b.querySelector('.bt');
+  c.classList.toggle('open');b.classList.toggle('open');
+  t.textContent=o?'Ver mais':'Ver menos';
+}
+function navTo(id){
+  var s=document.getElementById(id);
+  if(!s)return;
+  var c=s.querySelector('.col'),b=s.querySelector('.tb');
+  if(c&&b&&!c.classList.contains('open')){
+    c.classList.add('open');b.classList.add('open');
+    b.querySelector('.bt').textContent='Ver menos';
+  }
+  setTimeout(function(){s.scrollIntoView({behavior:'smooth',block:'start'})},300);
+}
+</script>
+</body>
+</html>
