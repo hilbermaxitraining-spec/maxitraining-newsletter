@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maxitraining em Pauta – Ed. 40</title>
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+  var btn=document.getElementById('dl-btn');
+  if(btn)btn.addEventListener('click',function(){
+    window.print();
+  });
+});
+</script>
+<style>
+@media print{
+  body{background:#fff;padding:0}
+  #dl-wrap{display:none!important}
+  .nl{box-shadow:none}
+  .col{display:block!important}
+  .tb{display:none!important}
+}
+</style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ECEAE4;font-family:Georgia,serif;color:#2A2420;padding:24px 12px 48px}
+.nl{max-width:700px;margin:0 auto;background:#FDFCFA;border-radius:2px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1)}
+.hd{background:#1B2A4A;padding:28px 36px 20px}
+.hd h1{color:#fff;font-size:22px;margin-bottom:4px}
+.hd .sub{color:#C49A3C;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.hd .meta{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);display:flex;gap:16px;align-items:center}
+.hd .eb{color:#C49A3C;font-size:10px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.hd .dt{color:#fff;font-size:11px}
+.toc{background:#F5F4F1;padding:20px 36px;border-bottom:1px solid #E8E5DF}
+.toc p{font-family:Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7B1D2E;margin-bottom:10px}
+.toc ul{list-style:none}
+.toc li{padding:4px 0;font-family:Arial,sans-serif;font-size:13px}
+.toc a{color:#1B2A4A;text-decoration:none;font-weight:500}
+.intro{padding:24px 36px;border-bottom:1px solid #E8E5DF;font-size:15px;line-height:1.7}
+.intro p+p{margin-top:10px}
+.sec{border-bottom:1px solid #E8E5DF}
+.sh{padding:24px 36px 0}
+.ey{font-family:Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7B1D2E;margin-bottom:6px}
+.st{font-size:22px;font-weight:700;color:#1B2A4A;line-height:1.25;margin-bottom:16px}
+.pv{padding:0 36px 16px}
+.pv p{font-size:14px;line-height:1.6;color:#6B6560;font-style:italic;border-left:2px solid #E8E5DF;padding-left:12px}
+.tb{display:flex;align-items:center;gap:8px;margin:0 36px 20px;background:none;border:1.5px solid #7B1D2E;border-radius:20px;padding:7px 18px;font-family:Arial,sans-serif;font-size:12px;font-weight:600;color:#7B1D2E;cursor:pointer;width:fit-content}
+.tb:hover{background:#7B1D2E;color:#fff}
+.ar{font-size:9px;transition:transform .3s}
+.tb.open .ar{transform:rotate(180deg)}
+.col{display:none}
+.col.open{display:block}
+.ci{padding:0 36px 28px}
+.ab p{font-size:14px;line-height:1.8;margin-bottom:14px}
+.ss{font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#7B1D2E;margin:20px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.bl{list-style:none;margin:6px 0 14px}
+.bl li{font-size:14px;line-height:1.6;padding-left:16px;position:relative;margin-bottom:6px}
+.bl li::before{content:'—';position:absolute;left:0;color:#C49A3C;font-weight:700}
+blockquote{border-left:3px solid #7B1D2E;margin:16px 0;padding:10px 16px;background:#F5F4F1;border-radius:0 4px 4px 0;font-style:italic;font-size:15px;color:#1B2A4A}
+.pq{margin:20px 0;padding:16px 20px;background:#1B2A4A;border-radius:4px;border-left:4px solid #C49A3C}
+.pql{font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C49A3C;margin-bottom:6px}
+.pq p{font-size:14px;font-style:italic;color:#fff;line-height:1.5}
+.src{font-family:Arial,sans-serif;font-size:11px;color:#6B6560;font-style:italic;margin-top:16px}
+.cta{margin:24px 36px;background:#F5F4F1;border:1px solid #E8E5DF;border-top:3px solid #7B1D2E;border-radius:4px;padding:24px}
+.ctat{font-size:17px;font-weight:700;color:#1B2A4A;margin-bottom:8px}
+.ctai{font-size:13px;line-height:1.6;margin-bottom:16px;color:#2A2420}
+.ci2{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.ic{width:30px;height:30px;background:#7B1D2E;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:13px}
+.ib strong{font-family:Arial,sans-serif;font-size:12px;font-weight:700;color:#1B2A4A;display:block;margin-bottom:2px}
+.ib span{font-size:12px;color:#6B6560;line-height:1.4}
+.div{height:1px;background:#E8E5DF;margin:14px 0}
+.ca{font-size:13px;line-height:1.6;color:#2A2420}
+.ft{background:#1B2A4A;padding:28px 36px}
+.fb{font-size:16px;color:#fff;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.fl{font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C49A3C;margin-bottom:3px}
+.fv{font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.7)}
+.fd{font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;margin-bottom:16px}
+.fc{display:flex;flex-wrap:wrap;gap:10px}
+.cp{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 12px;font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.8);text-decoration:none}
+/* tabela de estilos */
+.tbl{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:13px}
+.tbl th{background:#1B2A4A;color:#C49A3C;font-family:Arial,sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:8px 12px;text-align:left}
+.tbl td{padding:9px 12px;border-bottom:1px solid #E8E5DF;line-height:1.5}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:nth-child(even) td{background:#F5F4F1}
+@media(max-width:560px){.fg{grid-template-columns:1fr}.hd,.intro,.toc,.sh,.pv,.cta,.ci,.ft{padding-left:20px;padding-right:20px}.tb{margin-left:20px}.cta{margin-left:20px;margin-right:20px}.st{font-size:19px}.tbl{font-size:12px}}
+</style>
+</head>
+<body>
+<article class="nl">
+
+<!-- CABEÇALHO -->
+<header class="hd">
+  <h1>Maxitraining em Pauta</h1>
+  <p class="sub">Educação · Liderança · Desenvolvimento</p>
+  <div class="meta">
+    <span class="eb">Edição Nº 50</span>
+    <span class="dt">22/05/26 · Publicação Semanal</span>
+  </div>
+</header>
+
+<!-- ÍNDICE -->
+<nav class="toc">
+  <p>Nesta edição</p>
+  <ul>
+    <li><a href="javascript:void(0)" onclick="navTo('s1')">→ Liderança Situacional: O Modelo que Resistiu ao Tempo</a></li>
+    <li><a href="javascript:void(0)" onclick="navTo('s2')">→ Tecnologia — Ferramentas para Líderes que Querem Liderar de Verdade</a></li>
+    <li><a href="javascript:void(0)" onclick="navTo('s3')">→ Notícias — Liderança em Foco: O que os Dados de 2026 Revelam</a></li>
+  </ul>
+</nav>
+
+<!-- INTRODUÇÃO -->
+<section class="intro">
+  <p>Em 1969, Paul Hersey e Ken Blanchard apresentaram ao mundo um modelo de liderança que parecia simples demais para ser profundo — e profundo demais para ser simples. Mais de cinco décadas depois, a Liderança Situacional continua sendo uma das estruturas mais citadas, ensinadas e aplicadas em programas de desenvolvimento de líderes no mundo inteiro.</p>
+  <p>Nesta edição, exploramos por que esse conceito clássico não apenas sobreviveu ao tempo, mas se tornou ainda mais relevante em um ambiente de trabalho marcado pela diversidade geracional, pelo trabalho híbrido e pela aceleração da mudança.</p>
+</section>
+
+<!-- ARTIGO PRINCIPAL -->
+<section class="sec" id="s1">
+  <div class="sh">
+    <p class="ey">Artigo Principal</p>
+    <h2 class="st">Liderança Situacional: O Modelo que Resistiu ao Tempo — e Explica Muito do que Vemos Hoje</h2>
+  </div>
+  <div class="pv"><p>Criado em 1969, o modelo de Hersey e Blanchard ainda é referência obrigatória em programas de liderança ao redor do mundo. Mas o que faz uma teoria de meio século continuar sendo tão atual?</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+
+        <p>Há conceitos que envelhecem. Há conceitos que resistem. E há, raramente, aqueles que com o passar do tempo se tornam mais necessários do que quando foram criados. A Liderança Situacional pertence a essa última categoria.</p>
+
+        <p>Desenvolvida por Paul Hersey e Ken Blanchard no final dos anos 1960 e formalmente publicada em 1969, a teoria parte de uma premissa que, embora pareça óbvia, contrariava o pensamento dominante da época: <strong>não existe um único estilo de liderança eficaz para todas as situações.</strong> A eficácia do líder depende, fundamentalmente, da sua capacidade de adaptar o estilo de liderança ao nível de maturidade — técnica e motivacional — do colaborador em relação a uma tarefa específica.</p>
+
+        <p>À época, esse era um pensamento disruptivo. O modelo taylorista ainda ecoava nas organizações, e a liderança era amplamente vista como um traço de personalidade — algo que se tinha ou não se tinha. Hersey e Blanchard propuseram o oposto: liderança é um comportamento adaptável, não uma característica fixa.</p>
+
+        <p class="ss">Os Quatro Estilos e os Quatro Níveis</p>
+
+        <p>O modelo identifica quatro estilos de liderança — <strong>Direção, Orientação, Apoio e Delegação</strong> — que devem ser aplicados de acordo com o nível de desenvolvimento do colaborador em determinada tarefa:</p>
+
+        <table class="tbl">
+          <tr>
+            <th>Nível do Colaborador</th>
+            <th>Perfil</th>
+            <th>Estilo Recomendado</th>
+          </tr>
+          <tr>
+            <td><strong>D1</strong> — Iniciante Entusiasmado</td>
+            <td>Baixa competência, alta motivação</td>
+            <td>Direção (alto foco na tarefa)</td>
+          </tr>
+          <tr>
+            <td><strong>D2</strong> — Aprendiz Desiludido</td>
+            <td>Alguma competência, baixa motivação</td>
+            <td>Orientação (tarefa + relacionamento)</td>
+          </tr>
+          <tr>
+            <td><strong>D3</strong> — Capaz, mas Inseguro</td>
+            <td>Alta competência, motivação variável</td>
+            <td>Apoio (foco no relacionamento)</td>
+          </tr>
+          <tr>
+            <td><strong>D4</strong> — Autodidata Motivado</td>
+            <td>Alta competência, alta motivação</td>
+            <td>Delegação (baixo suporte)</td>
+          </tr>
+        </table>
+
+        <p>A elegância do modelo está exatamente nessa simplicidade operacional: o líder precisa primeiro <em>diagnosticar</em> onde o colaborador está — e só então escolher como agir.</p>
+
+        <p class="ss">Por Que Continua Válido em 2026</p>
+
+        <p>Cinco décadas depois, o ambiente organizacional mudou radicalmente. Mas os desafios que a Liderança Situacional propõe resolver continuam os mesmos — e se tornaram ainda mais complexos:</p>
+
+        <ul class="bl">
+          <li><strong>Diversidade geracional</strong> — equipes reúnem hoje colaboradores de até quatro gerações diferentes, com níveis de maturidade e expectativas distintas em relação à autonomia e ao suporte</li>
+          <li><strong>Trabalho híbrido</strong> — a distância física exige que líderes sejam ainda mais intencionais no diagnóstico do estado de cada colaborador, já que os sinais não verbais se perdem</li>
+          <li><strong>Aceleração da mudança</strong> — colaboradores experientes se tornam iniciantes com frequência à medida que novas tecnologias e processos surgem — o que exige reposicionamento constante do estilo de liderança</li>
+          <li><strong>Cultura de alta performance</strong> — o modelo oferece ao líder uma linguagem clara para justificar por que trata pessoas diferentes de formas diferentes — o que é frequentemente mal interpretado como favoritismo</li>
+        </ul>
+
+        <blockquote>"O maior erro de liderança não é usar o estilo errado. É usar sempre o mesmo estilo, independentemente da situação."<br><span style="font-size:12px;font-style:normal;color:#6B6560">— Ken Blanchard</span></blockquote>
+
+        <p class="ss">O Erro Mais Comum: Diagnosticar Uma Vez e Nunca Rever</p>
+
+        <p>Na prática, o ponto de falha mais frequente na aplicação do modelo é tratar o diagnóstico como permanente. Líderes identificam o nível de desenvolvimento do colaborador em determinado momento e cristalizam essa avaliação — mesmo quando a situação, a tarefa ou a motivação mudaram.</p>
+
+        <p>A Liderança Situacional é, por natureza, dinâmica. Um colaborador que ontem era D4 em uma tarefa específica pode ser D1 diante de uma nova responsabilidade. O diagnóstico precisa ser contínuo.</p>
+
+        <div class="pq">
+          <p class="pql">Reflexão para Líderes</p>
+          <p>Você adapta seu estilo de liderança à pessoa e à situação — ou repete o mesmo comportamento com todos? A resposta honesta a essa pergunta revela muito sobre sua eficácia como líder.</p>
+        </div>
+
+        <p>A Liderança Situacional não é uma teoria antiga que resistiu ao tempo por inércia acadêmica. É um modelo que permanece relevante porque toca algo essencial e invariável na relação entre líderes e liderados: a necessidade de ser visto, compreendido e apoiado de acordo com quem você é — não de acordo com quem o seu líder prefere que você seja.</p>
+
+        <p class="src">Fontes: Hersey & Blanchard — Management of Organizational Behavior (1969) · Ken Blanchard Companies — Situational Leadership II · CCL — Leadership Development Research 2025</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <p class="ctat">Desenvolva Líderes que Sabem se Adaptar</p>
+  <p class="ctai">A Maxitraining oferece, além de treinamentos de técnicas de apresentação e oratória, programas customizados de Liderança — da teoria à prática, com metodologia ativa e facilitação especializada para equipes de todos os níveis.</p>
+  <div class="ci2"><div class="ic">①</div><div class="ib"><strong>Workshops In Company</strong><span>Conteúdo e cases adaptados à sua realidade organizacional.</span></div></div>
+  <div class="ci2"><div class="ic">②</div><div class="ib"><strong>Trilhas de Liderança</strong><span>Programas modulares para líderes em desenvolvimento e gestores seniores.</span></div></div>
+  <div class="ci2"><div class="ic">③</div><div class="ib"><strong>Mentoria Individual</strong><span>Acompanhamento personalizado com o Prof. Hilbernon para líderes que querem acelerar.</span></div></div>
+  <div class="div"></div>
+  <p class="ca"><strong>Fale com o Prof. Hilbernon:</strong> WhatsApp <a href="https://wa.me/5521996861009" style="color:#7B1D2E;font-weight:600">+55 21 99686-1009</a> · <a href="https://lead-shift-now.lovable.app" style="color:#7B1D2E;font-weight:600">lead-shift-now.lovable.app</a></p>
+</div>
+
+<!-- SEÇÃO 2 -->
+<section class="sec" id="s2">
+  <div class="sh">
+    <p class="ey">Seção 2 — Tecnologia</p>
+    <h2 class="st">Ferramentas para Líderes que Querem Liderar de Verdade: Como a Tecnologia Apoia a Liderança Adaptativa</h2>
+  </div>
+  <div class="pv"><p>Diagnosticar o nível de maturidade da equipe exige mais do que intuição. Conheça as plataformas que estão ajudando líderes a tomar decisões mais precisas sobre como desenvolver cada colaborador.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+
+        <p>Um dos maiores desafios práticos da Liderança Situacional sempre foi o diagnóstico: como o líder, no dia a dia acelerado das organizações, consegue avaliar com precisão o nível de desenvolvimento de cada membro da equipe — em cada tarefa relevante?</p>
+
+        <p>Durante décadas, isso dependia quase exclusivamente da habilidade observacional do líder e de conversas individuais periódicas. Hoje, um conjunto de plataformas digitais está tornando esse processo mais estruturado, mais frequente e mais baseado em dados.</p>
+
+        <p class="ss">Plataformas que Apoiam a Liderança Adaptativa</p>
+
+        <p><strong>15Five</strong> é uma das ferramentas mais adotadas por equipes de alta performance. Combina check-ins semanais, OKRs e feedback contínuo em uma interface simples — e entrega ao líder um painel de engajamento e desempenho que facilita muito o diagnóstico situacional. A pergunta semanal customizável permite que o líder monitore motivação, bloqueios e progresso de forma ágil.</p>
+
+        <p><strong>Lattice</strong> vai além da avaliação de desempenho tradicional. Oferece mapeamento de competências, planos de desenvolvimento individual e ferramentas de feedback 360° que ajudam o líder a identificar onde cada colaborador está em sua curva de desenvolvimento — exatamente o que o modelo de Hersey e Blanchard requer.</p>
+
+        <p><strong>Betterworks</strong> integra metas, feedback e desenvolvimento em um único fluxo de trabalho — com forte integração ao ecossistema Microsoft e Google. Útil especialmente para líderes que gerenciam equipes híbridas distribuídas, onde a visibilidade do desenvolvimento individual tende a ser menor.</p>
+
+        <p class="ss">O Que a IA Está Adicionando ao Diagnóstico</p>
+
+        <p>Mais recentemente, funcionalidades de inteligência artificial nessas plataformas começaram a oferecer algo ainda mais poderoso: sugestões proativas de ação para o líder com base nos padrões identificados. Ferramentas como o <strong>Leapsome AI</strong> analisam histórico de desempenho, frequência de feedback e tendências de engajamento — e sugerem quando um colaborador pode estar em transição de nível de desenvolvimento, sinalizando o momento ideal para o líder ajustar seu estilo.</p>
+
+        <div class="pq">
+          <p class="pql">Insight Maxitraining</p>
+          <p>Tecnologia não substitui a relação líder-liderado. Mas pode ampliar a capacidade diagnóstica do líder — especialmente em equipes grandes ou geograficamente distribuídas. Use as ferramentas a favor da conexão, não como substituto dela.</p>
+        </div>
+
+        <p>A Liderança Situacional sempre foi um modelo que demanda do líder atenção constante ao outro. A tecnologia, quando bem usada, não enfraquece essa atenção — ela a estrutura e a escala.</p>
+
+        <p class="src">Fontes: 15Five.com · Lattice.com · Betterworks.com · Leapsome.com · G2 — Performance Management Software Reviews 2026</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section class="sec" id="s3">
+  <div class="sh">
+    <p class="ey">Seção 3 — Notícias</p>
+    <h2 class="st">Liderança em Foco: O que os Dados de 2026 Revelam sobre Desenvolver Líderes Adaptáveis</h2>
+  </div>
+  <div class="pv"><p>Três dados e eventos recentes que mostram por que a liderança adaptativa voltou ao centro da agenda de RH e desenvolvimento organizacional.</p></div>
+  <button class="tb" onclick="tog(this)"><span class="bt">Ver mais</span><span class="ar">▼</span></button>
+  <div class="col">
+    <div class="ci">
+      <div class="ab">
+
+        <!-- NOTÍCIA 1 -->
+        <p class="ss">📊 Gallup: Apenas 1 em cada 10 pessoas tem o talento natural para liderar bem</p>
+        <p>O relatório <em>State of the Global Workplace 2026</em> da Gallup reforça um dado que desafia organizações há anos: a maioria dos líderes chega à posição por desempenho técnico — não por competência de liderança. O estudo aponta que equipes com líderes bem desenvolvidos registram até 21% mais produtividade e 59% menos rotatividade. O dado reforça a urgência de programas estruturados de desenvolvimento — como trilhas baseadas em Liderança Situacional, que ensinam ao líder quando e como adaptar seu estilo.</p>
+        <p style="margin-bottom:6px"><em>Fonte: Gallup — State of the Global Workplace 2026</em></p>
+        <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:28px">Veja mais →</a>
+
+        <hr style="border:none;border-top:1px solid #E8E5DF;margin-bottom:24px">
+
+        <!-- NOTÍCIA 2 -->
+        <p class="ss">🎯 LinkedIn Learning: Liderança adaptável é a competência mais buscada em 2026</p>
+        <p>O relatório anual <em>Workplace Learning Report 2026</em> do LinkedIn Learning posicionou a liderança adaptável como a principal competência de gestão procurada por empresas globalmente — acima de comunicação, gestão de mudanças e inteligência emocional. O dado é particularmente relevante porque reflete a demanda real do mercado: organizações em busca de líderes que saibam ajustar comportamento conforme o contexto — exatamente o que o modelo situacional propõe.</p>
+        <p style="margin-bottom:6px"><em>Fonte: LinkedIn — Workplace Learning Report 2026</em></p>
+        <a href="https://learning.linkedin.com/resources/workplace-learning-report" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:28px">Veja mais →</a>
+
+        <hr style="border:none;border-top:1px solid #E8E5DF;margin-bottom:24px">
+
+        <!-- NOTÍCIA 3 -->
+        <p class="ss">🇧🇷 ABTD divulga Panorama do Treinamento no Brasil 2026 com foco em liderança</p>
+        <p>A Associação Brasileira de Treinamento e Desenvolvimento (ABTD) publicou o <em>Panorama do Treinamento no Brasil 2026</em>, indicando que liderança permanece como o tema de maior investimento em T&D no país pelo quinto ano consecutivo. O relatório destaca crescimento expressivo na demanda por programas que combinam teoria clássica com metodologias ativas — uma tendência que reposiciona modelos como o de Hersey e Blanchard não como conteúdo do passado, mas como base sólida para práticas contemporâneas de desenvolvimento.</p>
+        <p style="margin-bottom:6px"><em>Fonte: ABTD — Panorama do Treinamento no Brasil 2026</em></p>
+        <a href="https://www.abtd.com.br/panorama" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#7B1D2E;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:600;padding:7px 16px;border-radius:20px;text-decoration:none;margin-bottom:8px">Veja mais →</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="ft">
+  <p class="fb">Maxitraining em Pauta</p>
+  <div class="fg">
+    <div><p class="fl">Editor</p><p class="fv">Hilbernon M S Neto</p></div>
+    <div><p class="fl">Periodicidade</p><p class="fv">Semanal</p></div>
+    <div><p class="fl">Marketing</p><p class="fv">Bianca Omena Maximiano</p></div>
+    <div><p class="fl">Plataforma</p><p class="fv">LinkedIn Newsletter</p></div>
+  </div>
+  <p class="fd"><strong style="color:rgba(255,255,255,.6)">Disclaimer</strong> — Conteúdo informativo e educacional. Dados tratados em conformidade com a LGPD.</p>
+  <div class="fc">
+    <a href="mailto:hilbermaxitraining@gmail.com" class="cp">✉ hilbermaxitraining@gmail.com</a>
+    <a href="tel:+5521996861009" class="cp">📞 +55 21 99686-1009</a>
+    <a href="#" class="cp">in LinkedIn</a>
+    <a href="#" class="cp">@ prof_hilbernon</a>
+  </div>
+</footer>
+
+</article>
+
+<script>
+function tog(b){
+  var c=b.nextElementSibling,o=c.classList.contains('open'),t=b.querySelector('.bt');
+  c.classList.toggle('open');b.classList.toggle('open');
+  t.textContent=o?'Ver mais':'Ver menos';
+}
+function navTo(id){
+  var s=document.getElementById(id);
+  if(!s)return;
+  var c=s.querySelector('.col'),b=s.querySelector('.tb');
+  if(c&&b&&!c.classList.contains('open')){
+    c.classList.add('open');b.classList.add('open');
+    b.querySelector('.bt').textContent='Ver menos';
+  }
+  setTimeout(function(){s.scrollIntoView({behavior:'smooth',block:'start'})},300);
+}
+</script>
+</body>
+</html>
