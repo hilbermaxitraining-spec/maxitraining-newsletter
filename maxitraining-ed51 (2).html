@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxitraining em Pauta – Edição Nº 51 | 29 Mai 2026</title>
+<meta name="description" content="Maxitraining em Pauta – Newsletter semanal sobre Educação, Liderança e Desenvolvimento.">
+<meta property="og:title" content="Maxitraining em Pauta – Edição Nº 51">
+<meta property="og:description" content="Feedback como Ferramenta de Liderança: Da Cultura do Silêncio à Alta Performance">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:  #0f1923;
+    --navy2: #1a2535;
+    --ouro:  #C8A84B;
+    --ouro2: rgba(200,168,75,0.15);
+    --texto: #e8e8e8;
+    --sub:   rgba(255,255,255,0.6);
+    --borda: 1px solid rgba(200,168,75,0.3);
+  }
+
+  body {
+    background: var(--navy);
+    color: var(--texto);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .newsletter {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--navy2);
+    border-bottom: 2px solid var(--ouro);
+    padding: 32px 40px 24px;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+  .logo-mark img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+  .header-brand h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--ouro);
+    line-height: 1;
+  }
+  .header-brand span {
+    font-size: 12px;
+    color: var(--sub);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .edition-badge {
+    background: var(--ouro);
+    color: var(--navy);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 3px;
+  }
+  .edition-date {
+    font-size: 13px;
+    color: var(--sub);
+    letter-spacing: 1px;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    padding: 24px 40px;
+    border-bottom: var(--borda);
+    background: rgba(200,168,75,0.04);
+  }
+  .toc-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--ouro);
+    margin-bottom: 10px;
+  }
+  .toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .toc-list li::before {
+    content: '→ ';
+    color: var(--ouro);
+    font-weight: 600;
+  }
+  .toc-list a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .2s;
+  }
+  .toc-list a:hover { color: var(--ouro); }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 32px 40px;
+    border-bottom: var(--borda);
+  }
+  .intro p {
+    font-size: 15px;
+    color: var(--sub);
+    margin-bottom: 12px;
+  }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* ── CONTENT SECTIONS ── */
+  .content-section {
+    border-bottom: var(--borda);
+  }
+  .section-header {
+    padding: 36px 40px 16px;
+  }
+  .section-tag {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--ouro);
+    border: 1px solid var(--ouro);
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    line-height: 1.15;
+  }
+
+  .toggle-preview {
+    padding: 0 40px 16px;
+  }
+  .toggle-preview p {
+    font-size: 15px;
+    color: var(--sub);
+    font-style: italic;
+  }
+
+  .toggle-btn {
+    display: block;
+    margin: 0 40px 28px;
+    background: none;
+    border: var(--borda);
+    color: var(--ouro);
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background .2s, border-color .2s;
+    border-radius: 3px;
+  }
+  .toggle-btn:hover {
+    background: var(--ouro2);
+    border-color: var(--ouro);
+  }
+
+  .collapsible-inner {
+    padding: 0 40px 36px;
+  }
+  .collapsible-inner h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--ouro);
+    margin: 28px 0 10px;
+  }
+  .collapsible-inner h3:first-child { margin-top: 0; }
+  .collapsible-inner p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--texto);
+    margin-bottom: 14px;
+  }
+  .collapsible-inner ul {
+    margin: 10px 0 16px 20px;
+  }
+  .collapsible-inner li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--texto);
+    margin-bottom: 6px;
+  }
+  .collapsible-inner li::marker { color: var(--ouro); }
+
+  /* ── STAT CARDS ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .stat-card {
+    background: var(--ouro2);
+    border: var(--borda);
+    border-radius: 6px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-card .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--ouro);
+    line-height: 1;
+    display: block;
+  }
+  .stat-card .stat-label {
+    font-size: 12px;
+    color: var(--sub);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ── NEWS ── */
+  .news-grid {
+    padding: 0 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .news-item {
+    background: var(--navy2);
+    border-left: 3px solid var(--ouro);
+    border-radius: 0 6px 6px 0;
+    padding: 18px 20px;
+  }
+  .news-source {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--ouro);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .news-item h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .news-item h4 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .news-item h4 a:hover { color: var(--ouro); }
+  .news-item p {
+    font-size: 13.5px;
+    color: var(--sub);
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta-box {
+    margin: 40px 40px;
+    padding: 32px 36px;
+    background: var(--ouro2);
+    border: 1px solid rgba(200,168,75,0.5);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .cta-box h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: var(--ouro);
+    margin-bottom: 10px;
+  }
+  .cta-box p {
+    font-size: 14px;
+    color: var(--sub);
+    margin-bottom: 20px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--ouro);
+    color: var(--navy);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 12px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+  .cta-btn:hover { opacity: .85; }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 32px 40px 0;
+    border-top: var(--borda);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .footer-grid strong {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--ouro);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .footer-grid p { font-size: 13px; color: var(--sub); }
+  .contact-pills { display: flex; flex-direction: column; gap: 8px; }
+  .contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--texto);
+    text-decoration: none;
+    border: var(--borda);
+    border-radius: 20px;
+    padding: 5px 14px;
+    transition: background .2s, border-color .2s;
+    width: fit-content;
+  }
+  .contact-pill:hover { background: rgba(255,255,255,.08); border-color: var(--ouro); }
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,.3);
+    padding-top: 20px;
+    border-top: var(--borda);
+    text-align: center;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .header, .intro, .toc, .section-header,
+    .toggle-preview, .cta-box, .collapsible-inner, .footer { padding-left: 24px; padding-right: 24px; }
+    .toggle-btn { margin-left: 24px; margin-right: 24px; }
+    .cta-box { margin-left: 24px; margin-right: 24px; }
+    .news-grid { padding-left: 24px; padding-right: 24px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 14px; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: 22px; }
+    .header-brand h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<article class="newsletter">
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo-mark">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAACCCAYAAACn3f0CAAAbrElEQVR42u19aYxk13NeVXV1dXV1dffeM8OZITkkh6RISqIkipREUZREUZREUaIoSqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIo" alt="Maxitraining logo" />
+      </div>
+      <div class="header-brand">
+        <h1>Maxitraining em Pauta</h1>
+        <span>Educação · Liderança · Desenvolvimento</span>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="edition-badge">Edição Nº 51</span>
+      <span class="edition-date">29 Mai 2026 &nbsp;·&nbsp; Publicação Semanal</span>
+    </div>
+  </header>
+
+  <!-- SUMÁRIO -->
+  <nav class="toc">
+    <p class="toc-label">Nesta edição</p>
+    <ul class="toc-list">
+      <li><a href="#artigo-principal">Feedback como Ferramenta de Liderança: Da Cultura do Silêncio à Alta Performance</a></li>
+      <li><a href="#secao2">Tecnologia — O Desafio da Integração de Ferramentas Digitais nas Equipes Híbridas</a></li>
+      <li><a href="#secao3">Notícias: IA, Governança e o Futuro do Trabalho</a></li>
+    </ul>
+  </nav>
+
+  <!-- INTRODUÇÃO -->
+  <section class="intro">
+    <p>Líderes que transformam equipes têm algo em comum: eles falam. Mais do que isso — eles criam espaços onde as pessoas também podem falar, sem medo. Nesta edição, exploramos por que o feedback ainda é uma das ferramentas mais subestimadas da liderança corporativa, e o que separa as organizações que crescem daquelas que estagnam em silêncio.</p>
+    <p>Na frente tecnológica, discutimos um paradoxo que afeta cada vez mais empresas no modelo híbrido: a proliferação de ferramentas digitais que, em vez de conectar, fragmenta as equipes. E nas notícias, o radar desta semana aponta para os desdobramentos da IA no mercado corporativo — com dados que surpreendem.</p>
+  </section>
+
+  <!-- SEÇÃO 1: ARTIGO PRINCIPAL -->
+  <section id="artigo-principal" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Artigo Principal</span>
+      <h2 class="section-title">Feedback como Ferramenta de Liderança: Da Cultura do Silêncio à Alta Performance</h2>
+    </div>
+
+    <div class="toggle-preview">
+      <p>Nas organizações brasileiras, o feedback ainda é tratado como um evento pontual — uma avaliação semestral, um formulário anual de desempenho. Mas líderes que constroem equipes de alta performance sabem que feedback não é evento: é hábito. E cultivar esse hábito exige muito mais do que técnica — exige coragem, confiança e cultura.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection(this)">Leia o artigo completo ↓</button>
+
+    <div class="collapsible-inner" style="display:none">
+
+      <h3>Por Que o Silêncio Custa Caro</h3>
+      <p>Imagine um colaborador que percebe um erro recorrente no processo, mas nunca comenta — porque "não é bem assim que as coisas funcionam aqui". Ou um gestor que vê um talento se apagar aos poucos, mas acredita que o tempo resolverá. Esses cenários são mais comuns do que qualquer organização gostaria de admitir.</p>
+      <p>Segundo estudos de clima organizacional, empresas com baixa cultura de feedback registram até 30% mais turnover e equipes com engajamento significativamente inferior. O silêncio não é conforto — é custo. E na maioria das vezes, ele tem endereço: a liderança.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-num">30%</span>
+          <span class="stat-label">mais turnover em culturas sem feedback estruturado</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3×</span>
+          <span class="stat-label">mais engajamento em equipes com feedback frequente</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">72%</span>
+          <span class="stat-label">dos profissionais dizem que o feedback melhora sua performance</span>
+        </div>
+      </div>
+
+      <h3>Feedback como Linguagem de Liderança</h3>
+      <p>Os líderes mais eficazes não delegam o feedback às ferramentas de RH. Eles o incorporam ao cotidiano: na reunião de alinhamento, no corredor após uma apresentação, na conversa de cinco minutos antes de encerrar o dia. Feedback frequente, específico e seguro é a principal diferença entre um gestor que administra e um líder que desenvolve.</p>
+      <p>O problema é que muitos gestores foram promovidos por competência técnica, não por habilidade de comunicação. Dar feedback com clareza e sem gerar defensividade é uma competência — e como toda competência, ela pode ser desenvolvida.</p>
+
+      <h3>Os Três Tipos de Feedback que Toda Equipe Precisa</h3>
+      <ul>
+        <li><strong>Feedback de reconhecimento:</strong> nomeia comportamentos específicos que devem ser repetidos. Vai além do "parabéns" genérico e ancora o que foi bem-feito.</li>
+        <li><strong>Feedback de desenvolvimento:</strong> aponta lacunas ou oportunidades de melhoria com foco no futuro, não na culpa. A pergunta-chave aqui é: "O que você faria diferente da próxima vez?"</li>
+        <li><strong>Feedback corretivo:</strong> necessário quando há impacto negativo claro. Deve ser direto, factual e imediato — não acumulado para a avaliação anual.</li>
+      </ul>
+
+      <h3>Construindo uma Cultura de Feedback Contínuo</h3>
+      <p>Cultura não se decreta — se modela. A liderança que quer construir uma cultura de feedback precisa, antes de tudo, ser a primeira a pedi-lo. Um líder que pergunta "o que eu poderia ter feito melhor nessa reunião?" manda uma mensagem poderosa para a equipe: aqui, é seguro falar.</p>
+      <p>Além disso, é preciso criar rituais que sustentem essa prática. Check-ins semanais rápidos, conversas individuais regulares (one-on-ones) e retrospectivas de projeto são estruturas simples que tornam o feedback parte da rotina, não da exceção.</p>
+
+      <h3>Conclusão</h3>
+      <p>Alta performance não nasce de talentos isolados — nasce de equipes que se comunicam com transparência, que erram rápido, aprendem rápido e ajustam juntas. O feedback é o combustível desse ciclo. Organizações que dominam essa prática constroem vantagens que nenhuma tecnologia replica: confiança, agilidade e pertencimento.</p>
+      <p>Na MaxiTraining, desenvolvemos programas de liderança que capacitam gestores a transformar o feedback em ferramenta estratégica de desenvolvimento — com metodologias práticas, aplicadas ao contexto real das organizações brasileiras.</p>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: TECNOLOGIA -->
+  <section id="secao2" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Tecnologia</span>
+      <h2 class="section-title">O Desafio da Integração de Ferramentas Digitais nas Equipes Híbridas</h2>
+    </div>
+
+    <div class="toggle-preview">
+      <p>A proliferação de plataformas digitais no ambiente corporativo prometia simplificar a colaboração. Na prática, muitas empresas se viram com o problema oposto: equipes dispersas entre dezenas de ferramentas que não conversam entre si — e pessoas cada vez mais exaustas de navegar entre janelas, notificações e contextos fragmentados.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection(this)">Continuar lendo ↓</button>
+
+    <div class="collapsible-inner" style="display:none">
+
+      <h3>O Paradoxo da Hiperconectividade</h3>
+      <p>Uma pesquisa da Asana revelou que profissionais em modelo híbrido alternam entre, em média, 9 aplicativos diferentes ao longo do dia de trabalho. O resultado é previsível: atenção fragmentada, retrabalho por falta de contexto compartilhado e uma sensação crescente de que "o trabalho sobre o trabalho" ocupa mais tempo do que o trabalho em si.</p>
+      <p>Ironicamente, quanto mais ferramentas uma equipe utiliza, maior tende a ser a lacuna de comunicação. Cada plataforma cria seu próprio silo de informação — e as organizações que não gerenciam essa fragmentação ativamente acabam pagando o preço em produtividade e cultura.</p>
+
+      <h3>O Que os Líderes Devem Priorizar</h3>
+      <p>A resposta não está em adotar menos tecnologia, mas em adotá-la com mais intencionalidade. Isso significa definir claramente qual ferramenta serve a qual propósito, reduzir a sobreposição entre plataformas e — especialmente — incluir as equipes na decisão de quais ferramentas realmente fazem sentido para o seu fluxo de trabalho.</p>
+      <p>Líderes que tratam a integração digital como uma questão apenas de TI perdem o ponto central: a adoção de tecnologia é, fundamentalmente, uma questão de gestão de pessoas. E sem engajamento genuíno das equipes, nenhuma ferramenta entrega o valor prometido pelo fornecedor.</p>
+
+      <h3>Reflexão Final</h3>
+      <p>O modelo híbrido chegou para ficar. E com ele, a necessidade de líderes que saibam navegar o espaço entre o digital e o humano — garantindo que a tecnologia sirva às pessoas, e não o contrário. Organizações que dominarem essa equação terão equipes mais focadas, mais colaborativas e, consequentemente, mais competitivas.</p>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: NOTÍCIAS -->
+  <section id="secao3" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Notícias</span>
+      <h2 class="section-title">No Radar desta Semana</h2>
+    </div>
+
+    <div class="news-grid">
+
+      <article class="news-item">
+        <span class="news-source">Techware</span>
+        <h4><a href="https://www.techware.com.br/blog-ia-no-rh-2026" target="_blank" rel="noopener">IA no RH em 2026: da Velocidade à Governança</a></h4>
+        <p>Após um ciclo de adoção acelerada, 2026 inaugura uma nova fase para a IA no RH: a da governança responsável. Profissionais de RH deixam de ser operadores de processos e passam a ser parceiros estratégicos — mas para isso, precisam de dados confiáveis, processos estruturados e, acima de tudo, capacitação. O artigo aponta que integrar tecnologia à cultura de gestão é o grande desafio do setor neste ano.</p>
+      </article>
+
+      <article class="news-item">
+        <span class="news-source">Olhar Digital</span>
+        <h4><a href="https://olhardigital.com.br/2026/03/30/curiosidades/ia-mercado-2026/" target="_blank" rel="noopener">Enquanto a IA Assume Tarefas, Habilidades Humanas Viram Diferencial Competitivo</a></h4>
+        <p>Com a automação avançando em ritmo acelerado, competências como empatia, ética e criatividade deixam de ser "soft skills" e passam a ser ativos estratégicos. Organizações que investirem no desenvolvimento dessas habilidades terão vantagem crescente em um mercado cada vez mais automatizado — e mais disputado no que as máquinas ainda não conseguem replicar.</p>
+      </article>
+
+      <article class="news-item">
+        <span class="news-source">OpenClaw Brasil</span>
+        <h4><a href="https://openclaw.ia.br/artigos/10-tendencias-ia-agentica-2026/" target="_blank" rel="noopener">10 Tendências de IA Agêntica em 2026: O Guia para Líderes e CTOs</a></h4>
+        <p>Segundo o Gartner, 40% das aplicações empresariais terão agentes de IA incorporados até o fim de 2026 — ante menos de 5% em 2025. O salto é expressivo e traz implicações práticas para líderes de tecnologia e de negócios: de como redesenhar processos para absorver a automação ao impacto esperado na força de trabalho nos próximos 24 meses.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-box">
+    <h3>Desenvolva Líderes que Transformam</h3>
+    <p>Feedback eficaz, integração de equipes híbridas, adaptação à transformação digital — esses não são desafios de RH. São desafios de liderança. A MaxiTraining desenvolve programas sob medida para preparar seus líderes para o contexto real das organizações brasileiras.</p>
+    <a href="https://wa.me/5521996861009" class="cta-btn" target="_blank" rel="noopener">Fale Conosco</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <strong>MaxiTraining</strong>
+        <p>Consultoria em RH e Desenvolvimento Corporativo</p>
+      </div>
+      <div class="contact-pills">
+        <a href="mailto:hilber@maxitraining.com.br" class="contact-pill">✉ hilber@maxitraining.com.br</a>
+        <a href="https://maxitraining.com.br" class="contact-pill" target="_blank" rel="noopener">🌐 maxitraining.com.br</a>
+        <a href="https://linkedin.com/company/maxitraining" class="contact-pill" target="_blank" rel="noopener">in LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 MaxiTraining · Todos os direitos reservados · Para cancelar o recebimento, responda com "Remover"</p>
+  </footer>
+
+</article>
+
+<script>
+  function toggleSection(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = content.style.display !== 'none';
+    content.style.display = isOpen ? 'none' : 'block';
+    btn.textContent = isOpen ? 'Leia o artigo completo ↓' : 'Fechar ↑';
+    if (btn.textContent === 'Fechar ↑' && btn.previousElementSibling) {
+      // keep generic label for section 2
+      if (btn.closest('#secao2')) btn.textContent = 'Fechar ↑';
+    }
+  }
+</script>
+
+</body>
+</html>
