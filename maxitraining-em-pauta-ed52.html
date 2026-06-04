@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaxiTraining em Pauta — Edição Nº 52 | 06 Jun 2026</title>
+  <meta name="description" content="Newsletter semanal da MaxiTraining: RH, liderança e desenvolvimento corporativo. Edição 52 — O Fim da Avaliação Anual e a IA nas Empresas.">
+  <meta property="og:title" content="MaxiTraining em Pauta — Edição Nº 52">
+  <meta property="og:description" content="O Fim da Avaliação Anual de Desempenho e Copilotos de IA: produtividade real ou ilusão?">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0f1923;
+      --navy2:  #1a2535;
+      --navy3:  #111d2b;
+      --ouro:   #C8A84B;
+      --ouro2:  rgba(200,168,75,0.13);
+      --ouro3:  rgba(200,168,75,0.05);
+      --texto:  #e8e8e8;
+      --sub:    rgba(255,255,255,0.58);
+      --borda:  1px solid rgba(200,168,75,0.28);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0a1018;
+      font-family: 'Barlow', sans-serif;
+      color: var(--texto);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    article.newsletter {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--navy);
+      border-left: var(--borda);
+      border-right: var(--borda);
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--navy3);
+      border-bottom: 2px solid var(--ouro);
+      padding: 36px 40px 28px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      background: var(--ouro);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--navy);
+      letter-spacing: 1px;
+    }
+
+    .header-brand h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 2.5px;
+      color: var(--ouro);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .header-brand span {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sub);
+    }
+
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .edition-badge {
+      background: var(--ouro);
+      color: var(--navy);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      padding: 4px 14px;
+      border-radius: 3px;
+    }
+
+    .edition-date {
+      font-size: 12px;
+      color: var(--sub);
+      letter-spacing: 1px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--ouro3);
+      border-bottom: var(--borda);
+      padding: 22px 40px;
+    }
+
+    .toc-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ouro);
+      margin-bottom: 10px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .toc-list li::before {
+      content: '→';
+      color: var(--ouro);
+      margin-right: 10px;
+      font-size: 12px;
+    }
+
+    .toc-list a {
+      color: var(--texto);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .toc-list a:hover { color: var(--ouro); }
+
+    /* ── INTRO ── */
+    .intro {
+      padding: 36px 40px;
+      border-bottom: var(--borda);
+      background: var(--navy2);
+    }
+
+    .intro p {
+      font-size: 15px;
+      color: var(--sub);
+      line-height: 1.85;
+    }
+
+    .intro p + p { margin-top: 12px; }
+
+    /* ── CONTENT SECTIONS ── */
+    .content-section {
+      padding: 40px 40px 32px;
+      border-bottom: var(--borda);
+    }
+
+    .content-section:nth-child(odd) { background: var(--navy); }
+    .content-section:nth-child(even) { background: var(--navy2); }
+
+    .section-header { margin-bottom: 20px; }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ouro);
+      border: 1px solid rgba(200,168,75,0.4);
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px;
+      letter-spacing: 1.5px;
+      color: #f0e8d0;
+      line-height: 1.15;
+    }
+
+    .toggle-preview p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--texto);
+      margin-bottom: 18px;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: var(--borda);
+      color: var(--ouro);
+      font-family: 'Barlow', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.2s;
+      margin-bottom: 0;
+    }
+
+    .toggle-btn:hover {
+      background: var(--ouro2);
+      border-color: var(--ouro);
+    }
+
+    .collapsible-inner {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: var(--borda);
+    }
+
+    .collapsible-inner h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      color: var(--ouro);
+      margin: 24px 0 8px;
+    }
+
+    .collapsible-inner h3:first-child { margin-top: 0; }
+
+    .collapsible-inner p {
+      font-size: 14.5px;
+      line-height: 1.85;
+      color: var(--texto);
+      margin-bottom: 12px;
+    }
+
+    .collapsible-inner strong { color: var(--ouro); font-weight: 600; }
+
+    /* ── NEWS GRID ── */
+    .news-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 4px;
+    }
+
+    .news-item {
+      background: var(--ouro3);
+      border: var(--borda);
+      border-radius: 4px;
+      padding: 20px 22px;
+    }
+
+    .news-source {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ouro);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .news-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .news-item h4 a {
+      color: var(--texto);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .news-item h4 a:hover { color: var(--ouro); }
+
+    .news-item p {
+      font-size: 13.5px;
+      color: var(--sub);
+      line-height: 1.75;
+    }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      margin: 0;
+      padding: 48px 40px;
+      background: linear-gradient(135deg, #1a2535 0%, #0f1923 100%);
+      border-top: 2px solid var(--ouro);
+      border-bottom: var(--borda);
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: var(--ouro);
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      font-size: 14.5px;
+      color: var(--sub);
+      line-height: 1.85;
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--ouro);
+      color: var(--navy);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+      padding: 13px 36px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--navy3);
+      padding: 36px 40px;
+      border-top: 2px solid rgba(200,168,75,0.18);
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .footer strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: var(--ouro);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer p {
+      font-size: 12px;
+      color: var(--sub);
+    }
+
+    .contact-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .contact-pill {
+      font-size: 12px;
+      color: var(--sub);
+      text-decoration: none;
+      border: var(--borda);
+      padding: 4px 12px;
+      border-radius: 20px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-pill:hover { color: var(--ouro); border-color: var(--ouro); }
+
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      letter-spacing: 0.5px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 20px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .header, .toc, .intro, .content-section, .cta-box, .footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+      .header-brand h1 { font-size: 22px; }
+      .section-title { font-size: 24px; }
+      .footer-grid { flex-direction: column; }
+      .contact-pills { align-items: flex-start; }
+      .cta-box h3 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<article class="newsletter">
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo-mark">MT</div>
+      <div class="header-brand">
+        <h1>Maxitraining em Pauta</h1>
+        <span>Educação · Liderança · Desenvolvimento</span>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="edition-badge">Edição Nº 52</span>
+      <span class="edition-date">06 Jun 2026 &nbsp;·&nbsp; Publicação Semanal</span>
+    </div>
+  </header>
+
+  <!-- SUMÁRIO -->
+  <nav class="toc">
+    <p class="toc-label">Nesta edição</p>
+    <ul class="toc-list">
+      <li><a href="#artigo-principal">O Fim da Avaliação Anual de Desempenho</a></li>
+      <li><a href="#secao2">Tecnologia — Copilotos de IA: Produtividade Real ou Ilusão?</a></li>
+      <li><a href="#secao3">Notícias</a></li>
+    </ul>
+  </nav>
+
+  <!-- INTRODUÇÃO -->
+  <section class="intro">
+    <p>Duas forças estão redesenhando silenciosamente o ambiente corporativo brasileiro: a crise do feedback anual — um ritual que perdeu o compasso com a velocidade das organizações — e a chegada em massa dos copilotos de inteligência artificial, prometendo produtividade, mas exigindo mais do que tecnologia para entregar resultados.</p>
+    <p>Nesta edição, exploramos por que abandonar a avaliação anual é uma decisão estratégica e não apenas uma moda de RH, e investigamos com olhar crítico o que os dados realmente dizem sobre o impacto da IA no trabalho cotidiano. Boa leitura.</p>
+  </section>
+
+  <!-- SEÇÃO 1 — ARTIGO PRINCIPAL -->
+  <section id="artigo-principal" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Artigo Principal</span>
+      <h2 class="section-title">O Fim da Avaliação Anual de Desempenho: Por Que o Feedback Contínuo Está Ganhando as Organizações</h2>
+    </div>
+
+    <div class="toggle-preview">
+      <p>Durante décadas, a avaliação anual de desempenho funcionou como um rito de passagem corporativo: reuniões formais, formulários extensos e conversas carregadas de tensão que tentavam capturar 12 meses de trabalho em algumas horas. O problema é que o mundo corporativo mudou — e esse modelo não acompanhou a mudança.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection(this)">Leia o artigo completo ↓</button>
+
+    <div class="collapsible-inner" style="display:none">
+
+      <h3>Um Modelo Criado para Outra Era</h3>
+      <p>A avaliação anual nasceu em contextos industriais onde os ciclos de produção eram previsíveis e lineares. Fazia sentido avaliar ao fim do ciclo. Mas em 2026, organizações operam em sprints ágeis, reestruturações trimestrais e modelos híbridos onde objetivos definidos em janeiro frequentemente se tornam irrelevantes em março. <strong>Avaliar retroativamente o que não existe mais não é gestão de desempenho — é arqueologia corporativa.</strong></p>
+      <p>Segundo estudos recentes sobre gestão de talentos, mais de 70% dos colaboradores afirmam que as avaliações anuais não os ajudam a melhorar seu desempenho. O desfasamento temporal é o primeiro e mais grave sintoma: o feedback chega tarde demais para corrigir rotas, construir competências ou reconhecer comportamentos no momento em que ainda fazem diferença.</p>
+
+      <h3>O Que Significa Feedback Contínuo na Prática</h3>
+      <p>Feedback contínuo não é simplesmente "dar mais feedbacks". É uma mudança de mentalidade: do evento para o processo. Na prática, isso envolve <strong>check-ins frequentes</strong> (semanais ou quinzenais), conversas de desenvolvimento desvinculadas de decisões salariais, registro sistemático de observações ao longo do tempo e metas revisadas em ciclos curtos alinhados ao contexto real do negócio.</p>
+      <p>Empresas que adotaram esse modelo relatam benefícios concretos: redução da rotatividade, aumento do engajamento e uma percepção mais clara, por parte dos colaboradores, de que seu desenvolvimento é prioridade — e não apenas uma formalidade anual.</p>
+
+      <h3>O Papel Central da Liderança</h3>
+      <p>Aqui está o ponto que muitas organizações ignoram: feedback contínuo exige líderes preparados para dar e receber feedback de forma consistente, respeitosa e orientada ao desenvolvimento. <strong>Não basta implantar um sistema ou uma plataforma.</strong> É preciso desenvolver a competência de feedback como habilidade gerencial — o que inclui escuta ativa, comunicação não violenta, capacidade de separar comportamento de julgamento e coragem para ter conversas difíceis no tempo certo.</p>
+      <p>Segundo dados recentes, lideranças são o fator com maior impacto no clima, na retenção e nos resultados das equipes. O protagonismo do líder no reconhecimento e no desenvolvimento do time é, em última análise, o que determina se a cultura de feedback prospera ou murcha.</p>
+
+      <h3>Como Iniciar a Transição</h3>
+      <p>A migração para o feedback contínuo não precisa ser uma revolução imediata. Algumas organizações iniciam com revisões trimestrais de metas e conversas mensais de desenvolvimento — mantendo a avaliação formal como referência, mas reduzindo seu peso exclusivo. O essencial é que o <strong>diálogo sobre desempenho deixe de ser um evento e passe a ser um hábito</strong>, integrado à rotina das lideranças e esperado pelos colaboradores.</p>
+      <p>Ferramentas digitais ajudam — mas são meios, não fins. O que transforma a cultura é o comportamento consistente das lideranças ao longo do tempo.</p>
+
+      <h3>Conclusão</h3>
+      <p>A avaliação anual não vai desaparecer da noite para o dia em todas as organizações. Mas sua centralidade como instrumento único de gestão de desempenho já está sendo questionada — e com razão. As empresas que avançam mais rápido em retenção, engajamento e desenvolvimento de talentos são aquelas que entenderam que <strong>feedback é conversa, não formulário</strong>. E conversa precisa acontecer quando ainda há tempo de mudar algo. A MaxiTraining apoia organizações nessa transição, desenvolvendo programas práticos que transformam a cultura de feedback em vantagem competitiva.</p>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2 — TECNOLOGIA -->
+  <section id="secao2" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Tecnologia</span>
+      <h2 class="section-title">Copilotos de IA no Dia a Dia Corporativo: Produtividade Real ou Ilusão de Eficiência?</h2>
+    </div>
+
+    <div class="toggle-preview">
+      <p>Os números impressionam: 82,4% dos profissionais já utilizam inteligência artificial diariamente no trabalho — um crescimento de 88,6% em relação a 2024. O Copilot está no Teams, no Outlook, nos documentos. A IA nunca esteve tão presente. Mas a pergunta que as organizações precisam responder com honestidade é: <strong>onde está o impacto real?</strong></p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection(this)">Continuar lendo ↓</button>
+
+    <div class="collapsible-inner" style="display:none">
+      <p>Uma pesquisa recente da Conversion sobre Tendências de Marketing 2026 expõe um paradoxo incômodo: apesar da adoção massiva, <strong>88,2% dos profissionais usam IA apenas de forma conversacional</strong> — fazendo perguntas e aplicando respostas diretamente. Apenas 6,1% automatizam tarefas por meio de fluxos de trabalho, e 2,7% operam agentes autônomos. Em outras palavras: a maioria usa a IA como um Google mais sofisticado, não como um motor de transformação de processos.</p>
+
+      <p>O estudo Work Trend Index da Microsoft, divulgado em maio de 2026, traz um dado revelador: quase 6 em cada 10 colaboradores afirmam que a IA os ajuda a produzir trabalhos que não conseguiriam realizar há um ano. Isso é expressivo. Mas o mesmo estudo indica que <strong>fatores organizacionais têm mais que o dobro do impacto da tecnologia</strong> sobre os resultados (67% vs. 33%). Ou seja: a ferramenta sozinha não transforma — o contexto em que ela é usada é o que determina o valor gerado.</p>
+
+      <p>O diagnóstico que emerge é claro: as organizações avançaram rapidamente na adoção de copilotos de IA, mas a maioria ainda não institucionalizou o uso como parte dos processos corporativos. Investimentos baixos em capacitação estruturada e ausência de governança sobre como e quando usar a IA resultam em ganhos superficiais. <strong>O desafio de 2026 não é adotar IA — é fazer a IA trabalhar de verdade.</strong> E isso exige redesenho de processos, capacitação intencional das equipes e lideranças que saibam orquestrar humanos e tecnologia com propósito.</p>
+
+      <p>Para os gestores de RH e liderança, a mensagem é direta: antes de investir em mais ferramentas, vale perguntar se a organização já extraiu o potencial real das que possui. Produtividade com IA começa com clareza estratégica — não com licenças.</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3 — NOTÍCIAS -->
+  <section id="secao3" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Notícias</span>
+      <h2 class="section-title">No Radar desta Semana</h2>
+    </div>
+
+    <div class="news-grid">
+
+      <article class="news-item">
+        <span class="news-source">Microsoft / Source LATAM</span>
+        <h4><a href="https://news.microsoft.com/source/latam/noticias-da-microsoft/ia-avanca-nas-empresas-e-eleva-produtividade-mas-amadurecimento-passa-por-maior-uso-de-contexto-no-trabalho/?lang=pt-br" target="_blank" rel="noopener">IA avança nas empresas e eleva produtividade, mas amadurecimento exige contexto</a></h4>
+        <p>O mais recente Work Trend Index da Microsoft, publicado em 25 de maio de 2026, revela que quase 60% dos colaboradores já produzem trabalhos com IA que não conseguiriam realizar antes. Metade usa o Copilot para apoio cognitivo, mas o estudo destaca que fatores organizacionais — cultura, governança e estratégia — têm mais que o dobro do impacto sobre os resultados em comparação com a tecnologia em si.</p>
+      </article>
+
+      <article class="news-item">
+        <span class="news-source">GFoundry</span>
+        <h4><a href="https://gfoundry.com/pt/o-fim-das-avaliacoes-anuais-a-transicao-estrategica-para-o-feedback-continuo-na-avaliacao-de-desempenho-em-2026/" target="_blank" rel="noopener">O Fim das Avaliações Anuais: A Transição para o Feedback Contínuo em 2026</a></h4>
+        <p>Artigo analítico publicado em março de 2026 argumenta que a avaliação anual de desempenho — concebida na era industrial — tornou-se não apenas ineficaz, mas ativamente prejudicial à retenção de talentos. Em ambientes ágeis, objetivos definidos no início do ano ficam obsoletos em poucos meses. A migração para o feedback contínuo é apresentada como exigência operacional crítica para a sobrevivência do negócio.</p>
+      </article>
+
+      <article class="news-item">
+        <span class="news-source">Portal Nosso Meio</span>
+        <h4><a href="https://nossomeio.com.br/produtividade-com-ia-e-o-segundo-maior-desafio-do-marketing-em-2026-aponta-pesquisa/" target="_blank" rel="noopener">82,4% dos profissionais usam IA diariamente, mas maioria ainda opera de forma superficial</a></h4>
+        <p>Pesquisa Tendências de Marketing 2026 da Conversion aponta que, apesar do uso diário massivo de IA, 88,2% dos profissionais a utilizam apenas de forma conversacional. Apenas 6,1% automatizam tarefas via fluxos de trabalho. O levantamento também revela subinvestimento em capacitação: 41,1% das empresas oferecem apenas cursos gratuitos ou de baixo custo, e 28,7% não têm nenhuma iniciativa formal de aprendizado em IA.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-box">
+    <h3>Transforme Feedback em Cultura, não em Evento.</h3>
+    <p>A MaxiTraining desenvolve programas práticos para líderes e equipes construírem uma cultura de feedback contínuo — com metodologias aplicadas ao contexto real das organizações brasileiras. Chega de avaliações anuais que não movem resultados.</p>
+    <a href="https://wa.me/5521996861009" class="cta-btn" target="_blank" rel="noopener">Fale Conosco</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <strong>MaxiTraining</strong>
+        <p>Consultoria em RH e Desenvolvimento Corporativo</p>
+      </div>
+      <div class="contact-pills">
+        <a href="mailto:hilber@maxitraining.com.br" class="contact-pill">✉ hilber@maxitraining.com.br</a>
+        <a href="https://maxitraining.com.br" class="contact-pill" target="_blank" rel="noopener">🌐 maxitraining.com.br</a>
+        <a href="https://linkedin.com/company/maxitraining" class="contact-pill" target="_blank" rel="noopener">in LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 MaxiTraining · Todos os direitos reservados · Para cancelar o recebimento, responda com "Remover"</p>
+  </footer>
+
+</article>
+
+<script>
+  function toggleSection(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = content.style.display !== 'none';
+    content.style.display = isOpen ? 'none' : 'block';
+    btn.textContent = isOpen ? 'Leia o artigo completo ↓' : 'Fechar ↑';
+    if (btn.textContent === 'Fechar ↑' && btn.previousElementSibling?.classList.contains('toggle-preview')) {
+      // For section 2, adjust button text
+    }
+  }
+
+  // Fix toggle button text for section 2
+  document.querySelectorAll('.toggle-btn').forEach((btn, i) => {
+    if (i === 1) {
+      btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const isOpen = content.style.display !== 'none';
+        this.textContent = isOpen ? 'Continuar lendo ↓' : 'Fechar ↑';
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
