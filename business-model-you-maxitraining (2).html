@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Model You — MaxiTraining</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  :root{
+    --navy:#0A1628; --panel:#10223D; --panel2:#142B4A;
+    --gold:#D4AF37; --gold-light:#E8C45C;
+    --ink:#F5F2EA; --muted:#8FA1B8; --line:rgba(212,175,55,.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy);color:var(--ink);font-family:'Barlow',sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 48px}
+  header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:2px solid var(--gold);padding-bottom:18px;margin-bottom:22px}
+  .eyebrow{font-size:13px;letter-spacing:4px;color:var(--gold);font-weight:600;text-transform:uppercase}
+  h1{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:.95;letter-spacing:2px;margin-top:4px}
+  .sub{color:var(--muted);font-size:15px;margin-top:6px;max-width:560px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .meta label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .meta input{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--ink);font-family:'Barlow',sans-serif;font-size:15px;padding:9px 12px;min-width:200px}
+  .meta input:focus{outline:2px solid var(--gold);outline-offset:1px}
+  #board{display:grid;grid-template-columns:repeat(10,1fr);grid-auto-rows:minmax(150px,auto);gap:12px}
+  .blk{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px}
+  .blk.center{border:2px solid var(--gold);background:var(--panel2)}
+  .blk h2{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:1.5px;color:var(--gold-light);display:flex;align-items:center;gap:8px;line-height:1}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--navy);font-family:'Barlow',sans-serif;font-size:13px;font-weight:600;flex-shrink:0}
+  .hint{font-size:12.5px;color:var(--muted);line-height:1.35}
+  textarea{flex:1;min-height:64px;overflow:hidden;background:rgba(10,22,40,.55);border:1px solid rgba(143,161,184,.2);border-radius:8px;color:var(--ink);font-family:'Barlow',sans-serif;font-size:14px;line-height:1.45;padding:9px 10px;resize:none}
+  textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+  #b-parceiros{grid-column:1/3;grid-row:1/3}
+  #b-atividades{grid-column:3/5;grid-row:1}
+  #b-quem{grid-column:3/5;grid-row:2}
+  #b-ajuda{grid-column:5/7;grid-row:1/3}
+  #b-interage{grid-column:7/9;grid-row:1}
+  #b-canais{grid-column:7/9;grid-row:2}
+  #b-clientes{grid-column:9/11;grid-row:1/3}
+  #b-custos{grid-column:1/6;grid-row:3}
+  #b-recebe{grid-column:6/11;grid-row:3}
+  @media(max-width:900px){
+    #board{display:flex;flex-direction:column}
+    .blk{min-height:auto}
+    #b-quem{order:1} #b-atividades{order:2} #b-clientes{order:3}
+    #b-ajuda{order:4} #b-canais{order:5} #b-interage{order:6}
+    #b-parceiros{order:7} #b-custos{order:8} #b-recebe{order:9}
+    h1{font-size:40px}
+  }
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  button{font-family:'Barlow',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;border-radius:8px;padding:11px 16px;cursor:pointer;border:1px solid var(--gold);transition:transform .12s ease, background .12s ease}
+  button:hover{transform:translateY(-1px)}
+  button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
+  .b-gold{background:var(--gold);color:var(--navy)}
+  .b-gold:hover{background:var(--gold-light)}
+  .b-ghost{background:transparent;color:var(--gold-light)}
+  .b-ghost:hover{background:rgba(212,175,55,.12)}
+  .saveinfo{font-size:13px;color:var(--muted);margin-top:10px;min-height:18px}
+  footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px;letter-spacing:1px}
+  footer b{color:var(--gold)}
+
+  #formview{position:absolute;left:-12000px;top:0;width:860px;background:#0A1628;color:#F5F2EA;padding:40px;font-family:'Barlow',sans-serif}
+  #formview .fv-eyebrow{font-size:13px;letter-spacing:4px;color:#D4AF37;font-weight:600;text-transform:uppercase}
+  #formview .fv-title{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:2px;margin:6px 0 2px}
+  #formview .fv-meta{font-size:16px;color:#8FA1B8;border-bottom:2px solid #D4AF37;padding-bottom:14px;margin-bottom:8px}
+  #formview .fv-sec{padding:18px 0;border-bottom:1px solid rgba(143,161,184,.25);page-break-inside:avoid}
+  #formview .fv-sec h3{font-family:'Bebas Neue',sans-serif;font-size:23px;letter-spacing:1.5px;color:#E8C45C;display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  #formview .fv-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#D4AF37;color:#0A1628;font-family:'Barlow',sans-serif;font-size:14px;font-weight:600;flex-shrink:0}
+  #formview .fv-txt{font-size:15.5px;line-height:1.6;white-space:pre-wrap;word-wrap:break-word}
+  #formview .fv-txt.empty{color:#8FA1B8;font-style:italic}
+  #formview .fv-foot{margin-top:22px;text-align:center;font-size:13px;letter-spacing:1px;color:#8FA1B8}
+  #formview .fv-foot b{color:#D4AF37}
+
+  @media print{
+    body{background:#fff}
+    .wrap{display:none}
+    #formview{position:static;left:0;width:auto;background:#fff;color:#1A2433;padding:0}
+    #formview .fv-title{color:#0A1628}
+    #formview .fv-eyebrow,#formview .fv-foot b{color:#8A6D1F}
+    #formview .fv-sec h3{color:#8A6D1F}
+    #formview .fv-meta,#formview .fv-txt.empty,#formview .fv-foot{color:#5F6B7A}
+    #formview .fv-num{background:#8A6D1F;color:#fff}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">MaxiTraining &middot; Programa de Mentoria</div>
+      <h1>Business Model You</h1>
+      <div class="sub">Seu modelo de neg&oacute;cio pessoal &mdash; preencha os blocos na ordem dos n&uacute;meros. Frases curtas e diretas funcionam melhor que par&aacute;grafos.</div>
+    </div>
+    <div class="meta">
+      <div><label for="nome">Mentorado(a)</label><input type="text" id="nome" placeholder="Nome"></div>
+      <div><label for="data">Data</label><input type="date" id="data"></div>
+    </div>
+  </header>
+
+  <div id="board">
+    <div class="blk" id="b-parceiros">
+      <h2><span class="num">7</span>Quem ajuda voc&ecirc;</h2>
+      <div class="hint">Parceiros, mentores, rede de apoio, comunidades. Quem pode abrir portas ou complementar o que voc&ecirc; faz?</div>
+      <textarea data-k="parceiros" placeholder="Ex.: mentor de carreira, colegas da faculdade, antiga chefe..."></textarea>
+    </div>
+    <div class="blk" id="b-atividades">
+      <h2><span class="num">2</span>O que voc&ecirc; faz</h2>
+      <div class="hint">Atividades-chave que decorrem das suas compet&ecirc;ncias.</div>
+      <textarea data-k="atividades" placeholder="Ex.: organizo processos, atendo clientes, ensino..."></textarea>
+    </div>
+    <div class="blk" id="b-quem">
+      <h2><span class="num">1</span>Quem &eacute; voc&ecirc;</h2>
+      <div class="hint">Interesses, habilidades, personalidade, conhecimentos. Inclua o que parece &oacute;bvio &mdash; &eacute; a&iacute; que mora o diferencial.</div>
+      <textarea data-k="quem" placeholder="Ex.: boa comunicadora, organizada, formada em..."></textarea>
+    </div>
+    <div class="blk center" id="b-ajuda">
+      <h2><span class="num">4</span>Como voc&ecirc; ajuda</h2>
+      <div class="hint">Sua proposta de valor: que problema voc&ecirc; resolve? Este &eacute; o cora&ccedil;&atilde;o do canvas &mdash; vai virar sua headline.</div>
+      <textarea data-k="ajuda" placeholder="Ex.: ajudo pequenos neg&oacute;cios a organizar..."></textarea>
+    </div>
+    <div class="blk" id="b-interage">
+      <h2><span class="num">6</span>Como voc&ecirc; interage</h2>
+      <div class="hint">Relacionamento: presencial ou remoto? Pontual ou recorrente?</div>
+      <textarea data-k="interage" placeholder="Ex.: atendimento remoto, acompanhamento mensal..."></textarea>
+    </div>
+    <div class="blk" id="b-canais">
+      <h2><span class="num">5</span>Como te encontram</h2>
+      <div class="hint">Canais: LinkedIn, indica&ccedil;&otilde;es, WhatsApp, comunidades, eventos.</div>
+      <textarea data-k="canais" placeholder="Ex.: LinkedIn, indica&ccedil;&atilde;o de ex-colegas..."></textarea>
+    </div>
+    <div class="blk" id="b-clientes">
+      <h2><span class="num">3</span>Quem voc&ecirc; ajuda</h2>
+      <div class="hint">Clientes e p&uacute;blico-alvo. Seja espec&iacute;fico: &ldquo;empresas&rdquo; n&atilde;o vale &mdash; descreva quem, de que porte, com qual necessidade.</div>
+      <textarea data-k="clientes" placeholder="Ex.: pequenas empresas de varejo que precisam..."></textarea>
+    </div>
+    <div class="blk" id="b-custos">
+      <h2><span class="num">8</span>O que voc&ecirc; d&aacute;</h2>
+      <div class="hint">Custos: tempo, energia, deslocamento, investimento em ferramentas e forma&ccedil;&atilde;o.</div>
+      <textarea data-k="custos" placeholder="Ex.: 20h semanais, curso de atualiza&ccedil;&atilde;o..."></textarea>
+    </div>
+    <div class="blk" id="b-recebe">
+      <h2><span class="num">9</span>O que voc&ecirc; recebe</h2>
+      <div class="hint">Ganhos: renda, mas tamb&eacute;m flexibilidade, satisfa&ccedil;&atilde;o, aprendizado.</div>
+      <textarea data-k="recebe" placeholder="Ex.: renda mensal de R$..., hor&aacute;rios flex&iacute;veis..."></textarea>
+    </div>
+  </div>
+
+  <div class="btns">
+    <button class="b-gold" onclick="exportPNG()">Exportar formul&aacute;rio (PNG)</button>
+    <button class="b-ghost" onclick="exportPDF()">Salvar PDF</button>
+    <button class="b-ghost" onclick="clearAll()">Limpar canvas</button>
+  </div>
+  <div class="saveinfo" id="saveinfo">Suas respostas s&atilde;o salvas automaticamente neste navegador.</div>
+
+  <footer><b>MaxiTraining</b> &mdash; Treinamento &amp; Consultoria</footer>
+</div>
+
+<div id="formview" aria-hidden="true"></div>
+
+<script>
+const KEY='maxiBMY';
+const ORDER=[
+  {k:'quem', n:1, t:'Quem \u00e9 voc\u00ea'},
+  {k:'atividades', n:2, t:'O que voc\u00ea faz'},
+  {k:'clientes', n:3, t:'Quem voc\u00ea ajuda'},
+  {k:'ajuda', n:4, t:'Como voc\u00ea ajuda (proposta de valor)'},
+  {k:'canais', n:5, t:'Como te encontram'},
+  {k:'interage', n:6, t:'Como voc\u00ea interage'},
+  {k:'parceiros', n:7, t:'Quem ajuda voc\u00ea'},
+  {k:'custos', n:8, t:'O que voc\u00ea d\u00e1'},
+  {k:'recebe', n:9, t:'O que voc\u00ea recebe'}
+];
+const fields=document.querySelectorAll('textarea[data-k]');
+const nome=document.getElementById('nome');
+const data=document.getElementById('data');
+
+function grow(tx){
+  tx.style.height='auto';
+  tx.style.height=Math.max(64, tx.scrollHeight+2)+'px';
+}
+function save(){
+  const obj={nome:nome.value, data:data.value, f:{}};
+  fields.forEach(tx=>obj.f[tx.dataset.k]=tx.value);
+  try{
+    localStorage.setItem(KEY,JSON.stringify(obj));
+    document.getElementById('saveinfo').textContent='Salvo automaticamente \u00e0s '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'.';
+  }catch(e){}
+}
+function load(){
+  try{
+    const raw=localStorage.getItem(KEY);
+    if(!raw) return;
+    const obj=JSON.parse(raw);
+    if(obj.nome) nome.value=obj.nome;
+    if(obj.data) data.value=obj.data;
+    fields.forEach(tx=>{ if(obj.f && obj.f[tx.dataset.k]) tx.value=obj.f[tx.dataset.k]; });
+  }catch(e){}
+}
+fields.forEach(tx=>{
+  tx.addEventListener('input',()=>{grow(tx);save();});
+});
+nome.addEventListener('input',save);
+data.addEventListener('input',save);
+
+function esc(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function buildForm(){
+  const vals={};
+  fields.forEach(tx=>vals[tx.dataset.k]=tx.value.trim());
+  const dt=data.value?data.value.split('-').reverse().join('/'):'';
+  let meta=[nome.value.trim(),dt].filter(Boolean).join(' \u2014 ');
+  let h='<div class="fv-eyebrow">MaxiTraining \u00b7 Programa de Mentoria</div>';
+  h+='<div class="fv-title">Business Model You</div>';
+  h+='<div class="fv-meta">'+(meta?esc(meta):'Modelo de neg\u00f3cio pessoal')+'</div>';
+  ORDER.forEach(o=>{
+    const v=vals[o.k];
+    h+='<div class="fv-sec"><h3><span class="fv-num">'+o.n+'</span>'+o.t+'</h3>';
+    h+='<div class="fv-txt'+(v?'':' empty')+'">'+(v?esc(v):'(n\u00e3o preenchido)')+'</div></div>';
+  });
+  h+='<div class="fv-foot"><b>MaxiTraining</b> \u2014 Treinamento &amp; Consultoria</div>';
+  document.getElementById('formview').innerHTML=h;
+}
+function exportPNG(){
+  buildForm();
+  const el=document.getElementById('formview');
+  html2canvas(el,{backgroundColor:'#0A1628',scale:2,windowWidth:960}).then(cv=>{
+    const a=document.createElement('a');
+    a.download='business-model-you'+(nome.value?'-'+nome.value.toLowerCase().replace(/\s+/g,'-'):'')+'.png';
+    a.href=cv.toDataURL('image/png');
+    a.click();
+  });
+}
+function exportPDF(){
+  buildForm();
+  window.print();
+}
+function clearAll(){
+  if(!confirm('Limpar todas as respostas do canvas?')) return;
+  fields.forEach(tx=>{tx.value='';grow(tx);});
+  try{localStorage.removeItem(KEY);}catch(e){}
+  document.getElementById('saveinfo').textContent='Canvas limpo.';
+}
+data.value=new Date().toISOString().slice(0,10);
+load();
+fields.forEach(grow);
+</script>
+</body>
+</html>
