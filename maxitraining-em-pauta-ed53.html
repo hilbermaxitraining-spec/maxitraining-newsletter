@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxitraining em Pauta — Edição Nº 53 · 12 Jun 2026</title>
+<meta name="description" content="Sobrecarga silenciosa na liderança intermediária, Shadow AI nas empresas e as notícias de tecnologia da semana. Edição Nº 53 da newsletter MaxiTraining em Pauta.">
+<meta property="og:title" content="Maxitraining em Pauta — Edição Nº 53">
+<meta property="og:description" content="Educação · Liderança · Desenvolvimento — a newsletter semanal da MaxiTraining.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:   #0f1923;
+  --navy2:  #1a2535;
+  --ouro:   #C8A84B;
+  --ouro2:  rgba(200,168,75,0.15);
+  --texto:  #e8e8e8;
+  --sub:    rgba(255,255,255,0.6);
+  --borda:  1px solid rgba(200,168,75,0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--navy);
+  color: var(--texto);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.newsletter {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  border-bottom: var(--borda);
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.logo-mark {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  background: var(--navy2);
+  border: var(--borda);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--ouro);
+  letter-spacing: 1px;
+}
+.header-brand h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: var(--ouro);
+  line-height: 1.1;
+}
+.header-brand span {
+  font-size: 0.85rem;
+  color: var(--sub);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.edition-badge {
+  background: var(--ouro2);
+  border: var(--borda);
+  color: var(--ouro);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+.edition-date {
+  font-size: 0.85rem;
+  color: var(--sub);
+  letter-spacing: 1px;
+}
+
+/* ---------- TOC ---------- */
+.toc {
+  background: var(--navy2);
+  border: var(--borda);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 32px;
+}
+.toc-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: var(--ouro);
+  margin-bottom: 8px;
+}
+.toc-list {
+  list-style: none;
+}
+.toc-list li {
+  padding: 4px 0;
+}
+.toc-list a {
+  color: var(--texto);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px dotted rgba(200,168,75,0.4);
+  transition: color .2s;
+}
+.toc-list a:hover { color: var(--ouro); }
+
+/* ---------- INTRO ---------- */
+.intro {
+  margin-bottom: 36px;
+  font-size: 1.05rem;
+}
+.intro p + p { margin-top: 12px; }
+
+/* ---------- SEÇÕES ---------- */
+.content-section {
+  margin-bottom: 44px;
+}
+.section-header { margin-bottom: 16px; }
+.section-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ouro);
+  background: var(--ouro2);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.9rem;
+  letter-spacing: 1.5px;
+  line-height: 1.15;
+  color: var(--texto);
+}
+.toggle-preview p {
+  font-size: 1.02rem;
+  color: var(--texto);
+}
+.toggle-btn {
+  display: inline-block;
+  margin-top: 14px;
+  background: transparent;
+  border: var(--borda);
+  color: var(--ouro);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.toggle-btn:hover {
+  background: var(--ouro);
+  color: var(--navy);
+}
+.collapsible-inner {
+  margin-top: 20px;
+  border-left: 2px solid rgba(200,168,75,0.35);
+  padding-left: 20px;
+}
+.collapsible-inner h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  color: var(--ouro);
+  margin: 22px 0 8px;
+}
+.collapsible-inner h3:first-child { margin-top: 0; }
+.collapsible-inner p { margin-bottom: 12px; }
+
+/* ---------- NOTÍCIAS ---------- */
+.news-grid {
+  display: grid;
+  gap: 16px;
+}
+.news-item {
+  background: var(--navy2);
+  border: var(--borda);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.news-source {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ouro);
+}
+.news-item h4 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 6px 0 8px;
+  line-height: 1.4;
+}
+.news-item h4 a {
+  color: var(--texto);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(200,168,75,0.5);
+  transition: color .2s;
+}
+.news-item h4 a:hover { color: var(--ouro); }
+.news-item p {
+  font-size: 0.93rem;
+  color: var(--sub);
+}
+
+/* ---------- CTA ---------- */
+.cta-box {
+  background: linear-gradient(135deg, var(--navy2) 0%, rgba(200,168,75,0.12) 100%);
+  border: var(--borda);
+  border-radius: 14px;
+  padding: 32px 28px;
+  text-align: center;
+  margin-bottom: 44px;
+}
+.cta-box h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--ouro);
+  margin-bottom: 12px;
+}
+.cta-box p {
+  max-width: 540px;
+  margin: 0 auto 20px;
+  color: var(--texto);
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--ouro);
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 34px;
+  border-radius: 999px;
+  transition: opacity .2s, transform .2s;
+}
+.cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ---------- FOOTER ---------- */
+.footer {
+  border-top: var(--borda);
+  padding-top: 24px;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.footer-grid strong {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--ouro);
+}
+.footer-grid p {
+  font-size: 0.85rem;
+  color: var(--sub);
+}
+.contact-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-pill {
+  font-size: 0.82rem;
+  color: var(--texto);
+  text-decoration: none;
+  background: var(--navy2);
+  border: var(--borda);
+  border-radius: 999px;
+  padding: 6px 16px;
+  transition: color .2s, border-color .2s;
+}
+.contact-pill:hover { color: var(--ouro); }
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--sub);
+  text-align: center;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 540px) {
+  .newsletter { padding: 24px 16px 40px; }
+  .header-brand h1 { font-size: 1.7rem; }
+  .section-title { font-size: 1.55rem; }
+  .cta-box { padding: 26px 18px; }
+  .footer-grid { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<article class="newsletter">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo-mark">MT</div>
+      <div class="header-brand">
+        <h1>Maxitraining em Pauta</h1>
+        <span>Educação · Liderança · Desenvolvimento</span>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="edition-badge">Edição Nº 53</span>
+      <span class="edition-date">12 Jun 2026 &nbsp;·&nbsp; Publicação Semanal</span>
+    </div>
+  </header>
+
+  <!-- ===================== SUMÁRIO ===================== -->
+  <nav class="toc">
+    <p class="toc-label">Nesta edição</p>
+    <ul class="toc-list">
+      <li><a href="#artigo-principal">Sobrecarga Silenciosa: Como Identificar o Esgotamento da Liderança Intermediária</a></li>
+      <li><a href="#secao2">Tecnologia — Shadow AI: O Uso Não Autorizado de IA pelos Funcionários e o que Fazer a Respeito</a></li>
+      <li><a href="#secao3">Notícias — No Radar desta Semana</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== INTRO ===================== -->
+  <section class="intro">
+    <p>Eles traduzem a estratégia em execução, absorvem as pressões de cima e amparam as equipes embaixo — e, justamente por estarem no meio, raramente recebem a atenção que merecem. Nesta edição, olhamos para o elo mais pressionado das organizações: a liderança intermediária, e os sinais silenciosos de esgotamento que o RH não pode ignorar.</p>
+    <p>Na seção de tecnologia, abordamos um fenômeno que cresce nos bastidores das empresas brasileiras: o <em>Shadow AI</em> — o uso de ferramentas de inteligência artificial sem o conhecimento ou aval da TI. Risco, oportunidade ou os dois?</p>
+  </section>
+
+  <!-- ===================== SEÇÃO 1 ===================== -->
+  <section id="artigo-principal" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Artigo Principal</span>
+      <h2 class="section-title">Sobrecarga Silenciosa: Como Identificar o Esgotamento da Liderança Intermediária</h2>
+    </div>
+
+    <div class="toggle-preview">
+      <p>Gerentes e coordenadores ocupam a posição mais desgastante da hierarquia: respondem pela entrega das equipes, mediam conflitos, traduzem decisões estratégicas e, com frequência, fazem tudo isso sem o suporte que oferecem aos outros. Quando esse elo se rompe, a organização inteira sente — mas os sinais quase nunca chegam ao RH a tempo.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection(this)">Leia o artigo completo ↓</button>
+
+    <div class="collapsible-inner" style="display:none">
+      <h3>O paradoxo do meio</h3>
+      <p>A liderança intermediária vive um paradoxo estrutural: tem responsabilidade demais e autonomia de menos. De um lado, a alta gestão cobra resultados, agilidade e adesão a transformações cada vez mais frequentes. De outro, as equipes esperam acolhimento, clareza e proteção. O gestor do meio absorve as tensões dos dois mundos — e, segundo estudos recentes sobre saúde ocupacional, esse grupo apresenta índices de exaustão emocional consistentemente superiores aos de executivos seniores e colaboradores operacionais.</p>
+
+      <h3>Por que o esgotamento é silencioso</h3>
+      <p>Diferentemente de outros perfis, o líder intermediário raramente verbaliza o próprio desgaste. Há um receio implícito: admitir sobrecarga pode soar como incapacidade de gestão, justamente a competência pela qual ele é avaliado. O resultado é um esgotamento que se manifesta de forma indireta — e que costuma ser confundido com queda de performance, desengajamento ou "problemas de atitude".</p>
+
+      <h3>Os sinais que o RH deve monitorar</h3>
+      <p>Alguns indícios merecem atenção sistemática: aumento de retrabalho e microgestão (o líder deixa de delegar porque "não tem energia para explicar"); reuniões 1:1 com a equipe canceladas repetidamente; respostas a e-mails em horários cada vez mais tardios; queda na qualidade do feedback dado aos liderados; e o sintoma mais revelador — o silêncio nas reuniões de gestão, quando alguém antes participativo passa apenas a anotar e concordar.</p>
+
+      <h3>O custo invisível para a organização</h3>
+      <p>Quando a liderança intermediária se esgota, o impacto se multiplica em cascata: equipes inteiras perdem direção, a rotatividade aumenta e a comunicação entre estratégia e operação se deteriora. Pesquisas de mercado indicam que a relação com o gestor direto está entre os principais fatores de permanência ou saída de talentos — ou seja, cuidar de um líder é, na prática, cuidar de todos que respondem a ele.</p>
+
+      <h3>O que fazer: da detecção à prevenção</h3>
+      <p>Três frentes se mostram eficazes. Primeiro, criar espaços seguros de escuta exclusivos para gestores intermediários — grupos de pares, mentorias ou check-ins estruturados com o RH, separados dos ciclos de avaliação. Segundo, revisar a carga real de trabalho: muitos líderes acumulam funções técnicas e gerenciais sem que ninguém tenha formalizado essa dupla jornada. Terceiro, desenvolver competências de autogestão e delegação, que reduzem a sensação de que "tudo depende de mim".</p>
+
+      <h3>Conclusão</h3>
+      <p>O esgotamento da liderança intermediária não é fraqueza individual — é sintoma de desenho organizacional. Empresas que tratam o tema de forma estrutural, com escuta ativa e desenvolvimento contínuo, transformam seu elo mais frágil em sua maior vantagem competitiva. Na MaxiTraining, acompanhamos de perto esse desafio em programas de desenvolvimento de líderes nas organizações brasileiras: investir em quem está no meio é a forma mais direta de fortalecer o todo.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO 2 ===================== -->
+  <section id="secao2" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Tecnologia</span>
+      <h2 class="section-title">Shadow AI: O Uso Não Autorizado de IA pelos Funcionários e o que Fazer a Respeito</h2>
+    </div>
+
+    <div class="toggle-preview">
+      <p>Enquanto comitês discutem políticas de inteligência artificial, os colaboradores já decidiram: estão usando. Estudo recente da SAP com a Oxford Economics aponta que 66% das empresas brasileiras admitem que ferramentas de IA são utilizadas sem homologação ou conhecimento da TI.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection(this)">Continuar lendo ↓</button>
+
+    <div class="collapsible-inner" style="display:none">
+      <p>O fenômeno ganhou nome: <em>Shadow AI</em>. Ele se manifesta quando um analista cola um contrato em um chatbot público para resumi-lo, quando um vendedor usa IA para redigir propostas com dados de clientes, ou quando uma equipe inteira adota uma ferramenta gratuita sem avaliar onde aquelas informações são processadas. A intenção quase sempre é boa — ganhar produtividade. O risco, porém, é real: exposição de dados sigilosos, violações à LGPD e decisões baseadas em conteúdo sem qualquer validação.</p>
+      <p>A reação instintiva de muitas empresas é proibir. A experiência mostra que é a pior resposta possível: o uso não desaparece, apenas se esconde ainda mais — e a organização perde a chance de aprender com quem já descobriu, na prática, onde a IA gera valor. O Shadow AI é, antes de tudo, um diagnóstico: ele revela exatamente quais processos os colaboradores consideram lentos, burocráticos ou mal servidos pelas ferramentas oficiais.</p>
+      <p>O caminho mais maduro combina três movimentos: oferecer alternativas homologadas que sejam tão boas quanto as que as pessoas já usam por conta própria; estabelecer políticas claras e simples sobre o que pode e o que não pode ser compartilhado com sistemas de IA; e — o ponto mais negligenciado — capacitar. Letramento em IA deixou de ser tema de TI para se tornar pauta obrigatória de RH e desenvolvimento.</p>
+      <p>A reflexão que fica para o gestor: se sua equipe está usando IA às escondidas, o problema não é a tecnologia. É a distância entre a política da empresa e a realidade do trabalho.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO 3 ===================== -->
+  <section id="secao3" class="content-section">
+    <div class="section-header">
+      <span class="section-tag">Notícias</span>
+      <h2 class="section-title">No Radar desta Semana</h2>
+    </div>
+
+    <div class="news-grid">
+
+      <article class="news-item">
+        <span class="news-source">Mobile Time</span>
+        <h4><a href="https://www.mobiletime.com.br/noticias/11/06/2026/openai-compra-ona/" target="_blank" rel="noopener">OpenAI compra Ona para ampliar uso de agentes no Codex</a></h4>
+        <p>A aquisição leva blocos de construção de agentes de IA para o ambiente corporativo, em um momento de forte expansão: o Codex soma 5 milhões de usuários ativos semanais — cinco vezes mais que há um ano. A Ona, que apoiava 2 milhões de desenvolvedores, viu suas sessões de agentes crescerem 13 vezes entre setembro de 2025 e maio de 2026.</p>
+      </article>
+
+      <article class="news-item">
+        <span class="news-source">Mobile Time</span>
+        <h4><a href="https://www.mobiletime.com.br/terra-externa/09/06/2026/brasil-deve-ir-alem/" target="_blank" rel="noopener">Brasil precisa "passar de consumidor para produtor de tecnologias de IA", diz presidente do Google Brasil</a></h4>
+        <p>Em evento com executivos de Google e Uber, o debate girou em torno do papel do país na nova economia da inteligência artificial. A Uber anunciou investimento de R$ 2 bilhões em tecnologia no Brasil e relatou ter reduzido pela metade — de um ano para seis meses — o tempo de lançamento de novos projetos com apoio de IA.</p>
+      </article>
+
+      <article class="news-item">
+        <span class="news-source">Microsoft Source LATAM</span>
+        <h4><a href="https://news.microsoft.com/source/latam/noticias-da-microsoft/ia-empregos-e-a-proxima-geracao/?lang=pt-br" target="_blank" rel="noopener">IA, empregos e a próxima geração</a></h4>
+        <p>Artigo reflexivo da Microsoft sobre o impacto social da inteligência artificial no mercado de trabalho, motivado pelas reações de estudantes em formaturas nos EUA. O texto traça um paralelo histórico com a invenção da fotografia em 1838 — quando se previu o fim da pintura — para discutir como as transformações tecnológicas redefinem, e não eliminam, o trabalho humano.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta-box">
+    <h3>Fale com Impacto. Lidere com Presença.</h3>
+    <p>A MaxiTraining oferece mentoria especializada em Técnicas de Apresentação e Oratória
+    para executivos e equipes. Desenvolva a comunicação que transforma audiências —
+    em reuniões, apresentações ou palcos corporativos.</p>
+    <a href="https://wa.me/5521996861009" class="cta-btn" target="_blank" rel="noopener">Fale Conosco</a>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <strong>MaxiTraining</strong>
+        <p>Consultoria em RH e Desenvolvimento Corporativo</p>
+      </div>
+      <div class="contact-pills">
+        <a href="mailto:hilber@maxitraining.com.br" class="contact-pill">✉ hilber@maxitraining.com.br</a>
+        <a href="https://maxitraining.com.br" class="contact-pill" target="_blank" rel="noopener">🌐 maxitraining.com.br</a>
+        <a href="https://linkedin.com/company/maxitraining" class="contact-pill" target="_blank" rel="noopener">in LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 MaxiTraining · Todos os direitos reservados · Para cancelar o recebimento, responda com "Remover"</p>
+  </footer>
+
+</article>
+
+<script>
+function toggleSection(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.style.display !== 'none';
+  content.style.display = isOpen ? 'none' : 'block';
+  btn.textContent = isOpen ? (btn.closest('#artigo-principal') ? 'Leia o artigo completo ↓' : 'Continuar lendo ↓') : 'Fechar ↑';
+}
+</script>
+</body>
+</html>
