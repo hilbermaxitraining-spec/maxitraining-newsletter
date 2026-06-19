@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaxiTraining em Pauta — Edição Nº 54 · 19 Jun 2026</title>
+  <meta name="description" content="Liderança em tempos de incerteza, o fim do treinamento genérico com IA e as notícias que estão no radar do RH nesta semana." />
+  <meta property="og:title" content="MaxiTraining em Pauta — Edição Nº 54" />
+  <meta property="og:description" content="Liderança em tempos de incerteza e o fim do treinamento genérico. Educação · Liderança · Desenvolvimento." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0f1923;
+      --navy2:  #1a2535;
+      --ouro:   #C8A84B;
+      --ouro2:  rgba(200,168,75,0.15);
+      --texto:  #e8e8e8;
+      --sub:    rgba(255,255,255,0.6);
+      --borda:  1px solid rgba(200,168,75,0.3);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #060c12;
+      font-family: 'Barlow', sans-serif;
+      color: var(--texto);
+      line-height: 1.7;
+      font-weight: 300;
+      padding: 24px 12px;
+    }
+
+    .newsletter {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--navy);
+      border: var(--borda);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      background: linear-gradient(135deg, #0f1923 0%, #1a2535 100%);
+      padding: 34px 32px 26px;
+      border-bottom: 2px solid var(--ouro);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-mark img, .logo-mark svg {
+      width: 58px;
+      height: 58px;
+      display: block;
+    }
+    .header-brand h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.4rem;
+      letter-spacing: 1.5px;
+      color: #fff;
+      line-height: 1;
+    }
+    .header-brand span {
+      font-size: 0.72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ouro);
+    }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .edition-badge {
+      background: var(--ouro);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+    .edition-date {
+      font-size: 0.8rem;
+      color: var(--sub);
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- TOC ---------- */
+    .toc {
+      padding: 24px 32px;
+      background: var(--navy2);
+      border-bottom: var(--borda);
+    }
+    .toc-label {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 2px;
+      color: var(--ouro);
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a {
+      color: var(--texto);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .toc-list a:hover { color: var(--ouro); }
+
+    /* ---------- INTRO ---------- */
+    .intro {
+      padding: 28px 32px;
+      border-bottom: var(--borda);
+    }
+    .intro p { margin-bottom: 12px; font-size: 1.02rem; }
+    .intro p:last-child { margin-bottom: 0; color: var(--sub); }
+
+    /* ---------- CONTENT SECTIONS ---------- */
+    .content-section {
+      padding: 30px 32px;
+      border-bottom: var(--borda);
+    }
+    .section-header { margin-bottom: 16px; }
+    .section-tag {
+      display: inline-block;
+      background: var(--ouro2);
+      color: var(--ouro);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+    .toggle-preview p { font-size: 1.02rem; color: var(--texto); }
+
+    .toggle-btn {
+      margin-top: 16px;
+      background: transparent;
+      border: var(--borda);
+      color: var(--ouro);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toggle-btn:hover { background: var(--ouro); color: var(--navy); }
+
+    .collapsible-inner { margin-top: 18px; }
+    .collapsible-inner h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--ouro);
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+      margin: 20px 0 8px;
+    }
+    .collapsible-inner p { margin-bottom: 12px; font-size: 1rem; }
+    .collapsible-inner strong { color: #fff; font-weight: 600; }
+
+    /* ---------- NEWS ---------- */
+    .news-grid { display: flex; flex-direction: column; gap: 18px; }
+    .news-item {
+      background: var(--navy2);
+      border-left: 3px solid var(--ouro);
+      border-radius: 6px;
+      padding: 16px 18px;
+    }
+    .news-source {
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ouro);
+    }
+    .news-item h4 {
+      margin: 6px 0 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .news-item h4 a { color: #fff; text-decoration: none; }
+    .news-item h4 a:hover { color: var(--ouro); text-decoration: underline; }
+    .news-item p { font-size: 0.94rem; color: var(--sub); }
+
+    /* ---------- CTA ---------- */
+    .cta-box {
+      margin: 0;
+      padding: 36px 32px;
+      background: linear-gradient(135deg, #1a2535 0%, #0f1923 100%);
+      text-align: center;
+      border-bottom: var(--borda);
+    }
+    .cta-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      color: var(--ouro);
+      margin-bottom: 14px;
+    }
+    .cta-box p {
+      font-size: 1rem;
+      color: var(--texto);
+      max-width: 540px;
+      margin: 0 auto 22px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--ouro);
+      color: var(--navy);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 13px 34px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(200,168,75,0.3);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer { padding: 28px 32px; background: var(--navy); }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .footer-grid strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: var(--ouro);
+    }
+    .footer-grid p { font-size: 0.85rem; color: var(--sub); }
+    .contact-pills { display: flex; flex-direction: column; gap: 8px; }
+    .contact-pill {
+      font-size: 0.82rem;
+      color: var(--texto);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .contact-pill:hover { border-color: var(--ouro); color: var(--ouro); }
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 16px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .header, .toc, .intro, .content-section, .cta-box, .footer { padding-left: 20px; padding-right: 20px; }
+      .header-brand h1 { font-size: 2rem; }
+      .section-title { font-size: 1.6rem; }
+      .footer-grid { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <article class="newsletter">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-top">
+        <div class="logo-mark">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MaxiTraining logo">
+            <rect x="3" y="3" width="94" height="94" rx="12" fill="none" stroke="#C8A84B" stroke-width="3"/>
+            <text x="50" y="68" font-family="Bebas Neue, sans-serif" font-size="52" fill="#C8A84B" text-anchor="middle" letter-spacing="1">MT</text>
+          </svg>
+        </div>
+        <div class="header-brand">
+          <h1>MaxiTraining em Pauta</h1>
+          <span>Educação · Liderança · Desenvolvimento</span>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="edition-badge">Edição Nº 54</span>
+        <span class="edition-date">19 Jun 2026 &nbsp;·&nbsp; Publicação Semanal</span>
+      </div>
+    </header>
+
+    <!-- TOC -->
+    <nav class="toc">
+      <p class="toc-label">Nesta edição</p>
+      <ul class="toc-list">
+        <li><a href="#artigo-principal">Liderança em Tempos de Incerteza: o Gestor como Âncora Emocional da Equipe</a></li>
+        <li><a href="#secao2">Tecnologia — O Fim do "Treinamento Genérico"</a></li>
+        <li><a href="#secao3">Notícias — No Radar desta Semana</a></li>
+      </ul>
+    </nav>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <p>Em um cenário de mudanças aceleradas, o que separa equipes que travam das equipes que avançam raramente é a estratégia no papel — é a forma como o líder sustenta o time emocionalmente quando o chão parece se mover. Esta edição abre justamente por aí: o gestor como ponto de estabilidade.</p>
+      <p>Na sequência, mostramos como a inteligência artificial está enterrando o "treinamento genérico" e personalizando o desenvolvimento de cada profissional — além das notícias que merecem o seu radar nesta semana.</p>
+    </section>
+
+    <!-- SEÇÃO 1 -->
+    <section id="artigo-principal" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Artigo Principal</span>
+        <h2 class="section-title">Liderança em Tempos de Incerteza: o Gestor como Âncora Emocional da Equipe</h2>
+      </div>
+
+      <div class="toggle-preview">
+        <p>Reorganizações, novas tecnologias, metas que mudam no meio do trimestre. Para a maioria das equipes, a incerteza deixou de ser um evento pontual e virou o ambiente de trabalho. Nesse cenário, a pergunta deixa de ser "como o líder elimina a instabilidade?" e passa a ser "como o líder ajuda as pessoas a operarem bem apesar dela?".</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Leia o artigo completo ↓</button>
+
+      <div class="collapsible-inner" style="display:none">
+        <h3>A Incerteza Não É Exceção — É o Novo Ambiente</h3>
+        <p>Por muito tempo, a liderança foi treinada para "resolver" a incerteza: criar previsões, planos detalhados, garantias. Mas em organizações expostas a transformação digital, oscilações econômicas e mudanças regulatórias, esse ideal virou ilusão. O líder eficaz de hoje não promete um futuro estável — ele constrói uma equipe capaz de funcionar bem sem essa estabilidade. A diferença é sutil e decisiva: deixar de gerenciar certezas para passar a gerenciar a relação das pessoas com a dúvida.</p>
+
+        <h3>O Líder Define o "Clima Emocional" do Time</h3>
+        <p>Há um fenômeno bem documentado: o estado emocional de um gestor se propaga pela equipe com velocidade desproporcional. Ansiedade, irritação ou frieza não ficam contidas em uma sala — elas calibram o comportamento de todos ao redor. <strong>Segundo estudos recentes sobre clima organizacional, uma parcela significativa da variação no engajamento de uma equipe é atribuível diretamente ao comportamento do líder imediato</strong>, e não a fatores como salário ou estrutura. Em tempos de incerteza, isso se intensifica: as pessoas observam o líder em busca de pistas sobre o quão grave é a situação. Um gestor que mantém compostura sem fingir que está tudo bem oferece algo raro e valioso — segurança sem negação.</p>
+
+        <h3>Previsibilidade Emocional Vale Mais que Respostas Prontas</h3>
+        <p>Equipes não esperam que o líder tenha todas as respostas — esperam que ele seja previsível em como reage. Um gestor que oscila entre otimismo eufórico e pânico súbito esgota o time muito mais do que um cenário difícil. A âncora emocional não é quem nunca demonstra preocupação; é quem responde de forma consistente, comunica o que sabe e o que não sabe, e não terceiriza sua angústia para a equipe. Dizer "ainda não temos essa definição, mas vou compartilhar assim que tiver" sustenta mais confiança do que uma falsa garantia que depois se desfaz.</p>
+
+        <h3>Cuidar de Si para Sustentar os Outros</h3>
+        <p>Há um limite óbvio e frequentemente ignorado: nenhum líder consegue ser âncora emocional de um time se estiver ele próprio à deriva. A regulação emocional do gestor não é um traço de personalidade — é uma competência treinável, que envolve autoconsciência, gestão do próprio estresse e a disciplina de não despejar pressão para baixo. Líderes que negligenciam isso acabam transformando a própria sobrecarga no clima do time.</p>
+
+        <h3>Conclusão</h3>
+        <p>Liderar na incerteza é menos sobre ter o mapa e mais sobre ser o ponto fixo que permite ao time se mover com confiança mesmo sem ele. Essa estabilidade emocional não nasce de talento natural — desenvolve-se com prática, feedback e método. É exatamente esse o terreno em que a <strong>MaxiTraining</strong> atua: preparar líderes para o contexto real das organizações brasileiras, onde a única constante é a mudança.</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2 -->
+    <section id="secao2" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Tecnologia</span>
+        <h2 class="section-title">O Fim do "Treinamento Genérico": Como a IA Está Personalizando o Desenvolvimento Corporativo</h2>
+      </div>
+
+      <div class="toggle-preview">
+        <p>Por décadas, o treinamento corporativo seguiu uma lógica de produção em massa: o mesmo curso, no mesmo ritmo, para profissionais com históricos e lacunas completamente diferentes. A inteligência artificial está desmontando esse modelo.</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Continuar lendo ↓</button>
+
+      <div class="collapsible-inner" style="display:none">
+        <p>Com IA aplicada ao desenvolvimento de pessoas, o ponto de partida deixa de ser "o que vamos ensinar a todos" e passa a ser "o que <strong>cada</strong> profissional precisa aprender agora". Algoritmos mapeiam lacunas de competência, sugerem trilhas individualizadas, ajustam o ritmo conforme o desempenho e entregam conteúdo no momento exato em que ele é necessário — o chamado aprendizado em fluxo de trabalho. O resultado é menos tempo desperdiçado com aquilo que a pessoa já domina e mais foco no que realmente move o ponteiro.</p>
+
+        <p>Mas a personalização tem um preço de governança. Para recomendar a trilha certa, o sistema precisa de dados sobre o desempenho do colaborador — e é aí que mora a tensão. Quem tem acesso a esses dados? Eles serão usados para desenvolver ou para vigiar? A linha entre apoiar a carreira e monitorar a pessoa é mais fina do que parece, e empresas que ignoram essa fronteira correm o risco de transformar uma ferramenta de crescimento em motivo de desconfiança.</p>
+
+        <p>A reflexão prática é que tecnologia, sozinha, não desenvolve ninguém. A IA personaliza o <em>caminho</em>, mas continua sendo o ser humano — o gestor, o mentor, o RH — quem dá sentido à jornada, conecta o aprendizado ao propósito e sustenta o engajamento. O "fim do treinamento genérico" não significa o fim do fator humano; significa, ao contrário, liberá-lo das tarefas mecânicas para que possa fazer o que máquina nenhuma faz.</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3 -->
+    <section id="secao3" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Notícias</span>
+        <h2 class="section-title">No Radar desta Semana</h2>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-item">
+          <span class="news-source">MobileTime</span>
+          <h4><a href="https://www.mobiletime.com.br/noticias/15/06/2026/inteligencia-artificial-3/" target="_blank" rel="noopener">IA gera otimismo moderado entre os brasileiros: nota média de 6,9</a></h4>
+          <p>Pesquisa com 4.138 brasileiros mediu o otimismo da população quanto ao impacto da inteligência artificial na vida pessoal e profissional. A nota média foi 6,9, com otimismo um pouco menor entre mulheres e pessoas acima de 50 anos — um retrato útil para quem precisa endereçar receios da equipe diante da tecnologia.</p>
+        </article>
+
+        <article class="news-item">
+          <span class="news-source">Twygo</span>
+          <h4><a href="https://twygo.com/blog/ia-na-educacao-corporativa-em-2026-ai-in-learning-development-report/" target="_blank" rel="noopener">AI in L&amp;D Report 2026: 87% dos profissionais de T&amp;D já usam IA no trabalho</a></h4>
+          <p>O relatório mostra que a IA virou rotina nos times de Treinamento e Desenvolvimento. Entre os dados de governança, 59% evitam usar dados pessoais do aprendiz em ferramentas de IA, e 47% acreditam que o LMS seguirá como a espinha dorsal do aprendizado nos próximos três anos.</p>
+        </article>
+
+        <article class="news-item">
+          <span class="news-source">HostDime</span>
+          <h4><a href="https://www.hostdime.com.br/blog/ciberseguranca-2026-tendencias-dicas-e-leis" target="_blank" rel="noopener">"Shadow AI": uso não autorizado de IA por funcionários já é risco financeiro real</a></h4>
+          <p>O termo descreve o uso de ferramentas de IA sem aprovação formal da área de TI. Por operar fora das políticas e controles corporativos, a prática expõe a empresa a vazamento de dados sensíveis — reforçando a necessidade de políticas claras e de conscientização das equipes.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-box">
+      <h3>Cinco Sessões. Um Novo Patamar de Carreira.</h3>
+      <p>Estagnado em um cargo, inseguro sobre o próximo passo ou pronto para uma transição? A Mentoria Crash da MaxiTraining é um programa intensivo de cinco sessões que combina diagnóstico de perfil, clareza de objetivos e um plano de ação concreto — para você sair do ponto morto e assumir o controle da sua trajetória profissional.</p>
+      <a href="https://wa.me/5521996861009" class="cta-btn" target="_blank" rel="noopener">Fale Conosco</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <strong>MaxiTraining</strong>
+          <p>Consultoria em RH e Desenvolvimento Corporativo</p>
+        </div>
+        <div class="contact-pills">
+          <a href="mailto:hilbermaxitraining@gmail.com" class="contact-pill">✉ hilbermaxitraining@gmail.com</a>
+          <a href="https://pdf-to-web-hug.lovable.app/" class="contact-pill" target="_blank" rel="noopener">🌐 pdf-to-web-hug.lovable.app</a>
+          <a href="https://linkedin.com/company/maxitraining" class="contact-pill" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 MaxiTraining · Todos os direitos reservados · Para cancelar o recebimento, responda com "Remover"</p>
+    </footer>
+
+  </article>
+
+  <script>
+    function toggleSection(btn) {
+      const content = btn.nextElementSibling;
+      const isOpen = content.style.display !== 'none';
+      content.style.display = isOpen ? 'none' : 'block';
+      const isArtigo = btn.closest('#artigo-principal');
+      if (isOpen) {
+        btn.textContent = isArtigo ? 'Leia o artigo completo ↓' : 'Continuar lendo ↓';
+      } else {
+        btn.textContent = 'Fechar ↑';
+      }
+    }
+  </script>
+</body>
+</html>
