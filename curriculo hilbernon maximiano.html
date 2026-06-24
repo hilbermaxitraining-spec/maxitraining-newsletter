@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo – Hilbernon Maximiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #1B3A5B;
+    --azul-claro: #2E5C8A;
+    --vermelho: #C0392B;
+    --vermelho-claro: #E04A38;
+    --cinza-escuro: #2D3338;
+    --cinza-medio: #5C6670;
+    --cinza-claro: #8A929B;
+    --cinza-fundo: #EDEFF2;
+    --branco: #FFFFFF;
+    --off-white: #F7F8FA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cinza-fundo);
+    color: var(--cinza-escuro);
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--branco);
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    box-shadow: 0 18px 50px rgba(27,58,91,0.18);
+  }
+
+  /* ═══ SIDEBAR (RESUMIDO) ═══ */
+  .sidebar {
+    background: var(--azul);
+    color: #DCE4ED;
+    padding: 0 0 36px;
+  }
+
+  .id-block {
+    background: linear-gradient(150deg, var(--azul) 0%, #16304A 100%);
+    padding: 40px 30px 30px;
+    border-bottom: 3px solid var(--vermelho);
+    position: relative;
+  }
+  .id-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .id-name span { color: var(--vermelho-claro); display: block; }
+  .id-role {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #9FB4C9;
+    margin-top: 12px;
+    line-height: 1.9;
+  }
+
+  .s-block { padding: 26px 30px 0; }
+  .s-head {
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .s-head::before {
+    content: '';
+    width: 14px; height: 2px;
+    background: var(--vermelho-claro);
+    flex-shrink: 0;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+    color: #C9D5E1;
+  }
+  .contact-row svg { width: 14px; height: 14px; fill: var(--vermelho-claro); flex-shrink: 0; margin-top: 3px; }
+  .contact-row a { color: #C9D5E1; text-decoration: none; border-bottom: 1px solid rgba(201,213,225,0.25); }
+  .contact-row a:hover { border-bottom-color: var(--vermelho-claro); }
+
+  .edu-item { margin-bottom: 13px; }
+  .edu-degree {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #fff;
+    line-height: 1.25;
+  }
+  .edu-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: #8FA6BD;
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+  }
+
+  .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: #D5E0EB;
+    padding: 4px 9px;
+    border-radius: 3px;
+  }
+  .tag.accent {
+    background: rgba(224,74,56,0.16);
+    border-color: rgba(224,74,56,0.4);
+    color: #F2B8B0;
+  }
+
+  .bullet-list { list-style: none; }
+  .bullet-list li {
+    font-size: 13px;
+    color: #C9D5E1;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 7px;
+    line-height: 1.4;
+  }
+  .bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 5px; height: 5px;
+    background: var(--vermelho-claro);
+    border-radius: 50%;
+  }
+
+  .lang-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: #C9D5E1;
+    margin-bottom: 8px;
+  }
+  .lang-level {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8FA6BD;
+  }
+
+  /* ═══ MAIN (DETALHADO) ═══ */
+  .main { padding: 40px 44px 44px; }
+
+  .main-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--vermelho);
+    margin-bottom: 8px;
+  }
+  .main-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--azul);
+    line-height: 1.15;
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+    border-bottom: 2px solid var(--cinza-fundo);
+  }
+
+  .sec { margin-bottom: 30px; }
+  .sec-head {
+    font-family: 'Archivo', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--azul);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .sec-head::before {
+    content: '';
+    width: 20px; height: 3px;
+    background: var(--vermelho);
+    flex-shrink: 0;
+  }
+
+  .profile-text {
+    font-size: 14.5px;
+    color: var(--cinza-medio);
+    line-height: 1.7;
+  }
+  .profile-text strong { color: var(--cinza-escuro); font-weight: 600; }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 22px;
+  }
+  .comp-item {
+    font-size: 13.5px;
+    color: var(--cinza-medio);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .comp-item::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    color: var(--vermelho);
+    font-size: 11px;
+  }
+
+  .job { margin-bottom: 22px; position: relative; padding-left: 20px; }
+  .job::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 6px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--branco);
+    border: 2.5px solid var(--vermelho);
+  }
+  .job:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 3.5px; top: 17px;
+    width: 2px; height: calc(100% + 5px);
+    background: var(--cinza-fundo);
+  }
+  .job-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--cinza-escuro);
+    line-height: 1.2;
+  }
+  .job-org {
+    font-family: 'Archivo', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--azul-claro);
+    margin: 2px 0 3px;
+  }
+  .job-period {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--cinza-claro);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .job ul { list-style: none; }
+  .job ul li {
+    font-size: 13px;
+    color: var(--cinza-medio);
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+  .job ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--vermelho);
+  }
+
+  .teach-text {
+    font-size: 13.5px;
+    color: var(--cinza-medio);
+    line-height: 1.65;
+  }
+  .teach-text strong { color: var(--cinza-escuro); font-weight: 600; }
+
+  .proj-item { margin-bottom: 12px; }
+  .proj-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--azul);
+  }
+  .proj-desc {
+    font-size: 13px;
+    color: var(--cinza-medio);
+    line-height: 1.55;
+  }
+
+  .pub-box {
+    background: var(--off-white);
+    border-left: 3px solid var(--vermelho);
+    padding: 16px 18px;
+    font-size: 13.5px;
+    color: var(--cinza-medio);
+    line-height: 1.65;
+  }
+  .pub-box strong { color: var(--cinza-escuro); font-weight: 600; }
+
+  .ref-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .ref-card {
+    background: var(--off-white);
+    border: 1px solid var(--cinza-fundo);
+    border-radius: 5px;
+    padding: 13px 15px;
+  }
+  .ref-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--cinza-escuro);
+  }
+  .ref-title {
+    font-size: 12px;
+    color: var(--cinza-medio);
+    margin: 2px 0 4px;
+    line-height: 1.35;
+  }
+  .ref-phone {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--azul-claro);
+  }
+
+  /* ═══ ANIM ═══ */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(12px);} to {opacity:1;transform:translateY(0);} }
+  .page { animation: fadeUp 0.6s ease both; }
+
+  /* ═══ MOBILE ═══ */
+  @media (max-width: 760px) {
+    body { background: var(--azul); }
+    .page {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+      box-shadow: none;
+    }
+    .id-name { font-size: 34px; }
+    .main { padding: 32px 24px 40px; }
+    .comp-grid { grid-template-columns: 1fr; }
+    .ref-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: none; }
+    .page { box-shadow: none; grid-template-columns: 320px 1fr; max-width: 100%; }
+    @page { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ═══════ SIDEBAR / RESUMIDO ═══════ -->
+  <aside class="sidebar">
+
+    <div class="id-block">
+      <div class="id-name">Hilbernon<span>Maximiano</span></div>
+      <div class="id-role">Executivo Sênior de RH<br>Consultor<br>Prof. Universitário</div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Contato</div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <a href="https://wa.me/5521996861009" target="_blank">+55 21 99686-1009</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="https://mail.google.com/mail/?view=cm&to=hilbernon@me.com" target="_blank">hilbernon@me.com</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span>R. Rivadávia Campos, 1000 B1 115 · CEP 22790-685 · Rio de Janeiro – RJ</span>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        <a href="https://linkedin.com/in/hilbernon" target="_blank">linkedin.com/in/hilbernon</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <a href="https://instagram.com/prof_hilbernon" target="_blank">@prof_hilbernon</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+        <a href="http://lattes.cnpq.br/6866593537541226" target="_blank">Currículo Lattes – CNPq</a>
+      </div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Formação</div>
+      <div class="edu-item">
+        <div class="edu-degree">Mestrado em História Política</div>
+        <div class="edu-meta">UERJ · 2013</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">MBA Executivo</div>
+        <div class="edu-meta">COPPEAD / UFRJ · 1993</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Bacharel em Comunicação Social</div>
+        <div class="edu-meta">PUC-RJ · 1981</div>
+      </div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Certificações</div>
+      <ul class="bullet-list">
+        <li>Coach – ICI / ICF</li>
+        <li>Assessment Janusian (Liderança)</li>
+        <li>Assessment MPP</li>
+        <li>Ger. de Projetos – Chevron (CPDEP)</li>
+        <li>Ger. de Projetos – G. Washington University</li>
+      </ul>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Idiomas</div>
+      <div class="lang-row"><span>Português</span><span class="lang-level">Nativo</span></div>
+      <div class="lang-row"><span>Inglês</span><span class="lang-level">Fluente</span></div>
+      <div class="lang-row"><span>Espanhol</span><span class="lang-level">Fluente</span></div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Habilidades</div>
+      <ul class="bullet-list">
+        <li>Comunicação Oral e Escrita</li>
+        <li>Liderança Situacional</li>
+        <li>Gestão de Projetos e Processos</li>
+        <li>Pensamento Estratégico</li>
+      </ul>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Ferramentas</div>
+      <div class="tag-list">
+        <span class="tag accent">Claude</span>
+        <span class="tag accent">Lovable</span>
+        <span class="tag accent">N8N</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Monday.com</span>
+      </div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-head">Palavras-Chave</div>
+      <div class="tag-list">
+        <span class="tag">Gestão de Pessoas</span>
+        <span class="tag">RH Estratégico</span>
+        <span class="tag">Desenvolvimento Organizacional</span>
+        <span class="tag">Treinamento &amp; Desenvolvimento</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Coaching Executivo</span>
+        <span class="tag">Mentoria</span>
+        <span class="tag">Recrutamento &amp; Seleção</span>
+        <span class="tag">Cultura Organizacional</span>
+        <span class="tag">Endomarketing</span>
+        <span class="tag">Educação Corporativa</span>
+        <span class="tag">EAD</span>
+        <span class="tag">Gestão de Mudança</span>
+        <span class="tag">Avaliação de Desempenho</span>
+        <span class="tag">Consultoria de RH</span>
+        <span class="tag">People Analytics</span>
+        <span class="tag">Gestão de Projetos</span>
+        <span class="tag">Docência Superior</span>
+        <span class="tag">Palestrante</span>
+        <span class="tag">HR Business Partner</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ═══════ MAIN / DETALHADO ═══════ -->
+  <main class="main">
+
+    <div class="main-eyebrow">Hilbernon Maximiano da Silva Neto</div>
+    <h1 class="main-title">Executivo Sênior de RH · T&amp;D · Coaching Executivo</h1>
+
+    <div class="sec">
+      <div class="sec-head">Perfil Profissional</div>
+      <p class="profile-text">
+        Executivo e consultor com mais de três décadas de atuação em Recursos Humanos, Desenvolvimento Organizacional, Treinamento &amp; Desenvolvimento e Gestão Estratégica de Pessoas em empresas de grande porte como <strong>Chevron / Texaco</strong>, <strong>Amsterdam Sauer Joalheiros</strong> e <strong>Cosigua (Grupo Gerdau)</strong>.
+        Sócio-proprietário da <strong>MaxiTraining – Treinamento &amp; Consultoria</strong>, lidera projetos de reestruturação de RH, mapeamento de processos, recrutamento e seleção, endomarketing, implementação de plataformas (Factorial RH, Zoho CRM) e mentoria de executivos.
+        Coach certificado ICI / ICF e consultor credenciado das ferramentas Janusian (Liderança) e MPP. Palestrante internacional na América Latina e Caribe e professor universitário em Graduação e Pós-Graduação.
+      </p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">Competências-Chave</div>
+      <div class="comp-grid">
+        <div class="comp-item">Gestão Estratégica de Pessoas</div>
+        <div class="comp-item">Treinamento &amp; Desenvolvimento</div>
+        <div class="comp-item">Reestruturação da área de RH</div>
+        <div class="comp-item">Recrutamento &amp; Seleção</div>
+        <div class="comp-item">Coaching Executivo &amp; Mentoria</div>
+        <div class="comp-item">Assessment Janusian &amp; MPP</div>
+        <div class="comp-item">Endomarketing &amp; Cultura</div>
+        <div class="comp-item">Programas de Liderança / EAD</div>
+        <div class="comp-item">Plataformas de RH</div>
+        <div class="comp-item">Diagnóstico Organizacional</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">Experiência Profissional</div>
+
+      <div class="job">
+        <div class="job-title">Sócio-Proprietário &amp; Consultor Responsável de RH</div>
+        <div class="job-org">MaxiTraining – Treinamento &amp; Consultoria · Rio de Janeiro</div>
+        <div class="job-period">2008 – Atual</div>
+        <ul>
+          <li>Liderança de projetos de reestruturação de RH em clientes como Multicom.net, AIGLP e Sindigás.</li>
+          <li>Mapeamento e redesenho de processos de R&amp;S e onboarding, com ganho de eficiência e padronização.</li>
+          <li>Implementação da plataforma Factorial RH e do CRM Zoho, integrando pessoas e operação comercial.</li>
+          <li>Coaching e mentoria de C-level (CEOs, presidentes e diretores) e seleção de diretores.</li>
+          <li>Cursos in company: Liderança, Negociação (Harvard), Apresentações Eficazes, BPM, Ética e Gestão do Tempo.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Consultor de Recursos Humanos</div>
+        <div class="job-org">Amsterdam Sauer Joalheiros · Rio de Janeiro</div>
+        <div class="job-period">2011 – 2012</div>
+        <ul>
+          <li>Consultoria em processos de RH para rede de varejo de luxo, com foco em desenvolvimento de equipes de loja.</li>
+          <li>Estruturação de trilhas de capacitação para atendimento consultivo e excelência em vendas.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Coordenador de T&amp;D – América Latina</div>
+        <div class="job-org">Chevron · Rio de Janeiro</div>
+        <div class="job-period">2004 – 2010</div>
+        <ul>
+          <li>Responsável pela estratégia regional de T&amp;D na América Latina e Caribe.</li>
+          <li>Desenho e entrega de programas de liderança, ética, negociação e gestão de processos.</li>
+          <li>Implantação de currículos corporativos e gestão de fornecedores globais de aprendizagem.</li>
+          <li>Atuação multicultural em diversos países como facilitador e palestrante.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Gerente de Desenvolvimento de RH</div>
+        <div class="job-org">Texaco · Rio de Janeiro</div>
+        <div class="job-period">1989 – 1999</div>
+        <ul>
+          <li>Gestão de desenvolvimento organizacional, T&amp;D e carreiras da Texaco no Brasil.</li>
+          <li>Programas de sucessão, avaliação de desempenho e desenvolvimento de líderes em todos os níveis.</li>
+          <li>Iniciativas de cultura, engajamento e comunicação interna.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">Experiência Docente</div>
+      <p class="teach-text">
+        <strong>Professor – Centro Universitário IBMR</strong> (Laureate / Ânima Educação), 2014–2023. Disciplinas: Gestão Estratégica de Pessoas, T&amp;D, Gestão de Resultados, Diagnóstico Organizacional, Projetos de Consultoria, Comportamento Organizacional, Planejamento de Carreiras, Gestão da Inovação e Gestão de Projetos.
+        <br><br>
+        <strong>Coordenador de EAD – IBMR</strong> (2015–2017), gestão das plataformas Blackboard e Moodle. Atuação também em FUNCEFET, Universidade Católica de Petrópolis, IBMEC e IED – Istituto Europeo di Design.
+      </p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">Projetos &amp; Resultados Recentes</div>
+      <div class="proj-item">
+        <span class="proj-name">Multicom.net — </span><span class="proj-desc">reestruturação completa do RH, mapeamento de R&amp;S, endomarketing, implementação do Factorial RH e assessoramento direto ao CEO.</span>
+      </div>
+      <div class="proj-item">
+        <span class="proj-name">AIGLP — </span><span class="proj-desc">assessoramento ao Presidente Executivo, seleção e mentoria do Diretor Executivo, implementação do CRM Zoho e participação no 36º Congresso da AIGLP.</span>
+      </div>
+      <div class="proj-item">
+        <span class="proj-name">Sindigás — </span><span class="proj-desc">desenho e entrega do treinamento Introdução ao Gerenciamento de Projetos; produção de conteúdo institucional e técnico.</span>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">Publicações &amp; Reconhecimentos</div>
+      <div class="pub-box">
+        Autor do livro <strong>"Soberania &amp; Desenvolvimento: A Questão do Petróleo no Brasil – Primeiro Governo da Era Vargas"</strong>. Editor da newsletter <strong>MaxiTraining em Pauta</strong> (LinkedIn). Palestrante internacional em eventos na América Latina e Caribe.
+      </div>
+    </div>
+
+    <div class="sec" style="margin-bottom:0;">
+      <div class="sec-head">Referências</div>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <div class="ref-name">Eng. Sergio Bandeira de Mello</div>
+          <div class="ref-title">Presidente do Sindigás</div>
+          <div class="ref-phone">+55 21 98188-0888</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-name">José Tadeu Bijos</div>
+          <div class="ref-title">CEO Multicom</div>
+          <div class="ref-phone">+55 21 99408-3980</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-name">Profa. Carla Soares</div>
+          <div class="ref-title">FGV</div>
+          <div class="ref-phone">+55 21 98121-1719</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-name">Prof. Fernando Sardinha Querubim</div>
+          <div class="ref-title">Referência Acadêmica</div>
+          <div class="ref-phone">+55 21 99941-8775</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+</body>
+</html>
