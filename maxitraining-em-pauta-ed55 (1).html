@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaxiTraining em Pauta — Edição Nº 55 · 26 Jun 2026</title>
+  <meta name="description" content="NR-1 e riscos psicossociais, Shadow AI no ambiente corporativo e as notícias que estão no radar da semana. A newsletter semanal da MaxiTraining." />
+  <meta property="og:title" content="MaxiTraining em Pauta — Edição Nº 55" />
+  <meta property="og:description" content="NR-1 e a nova obrigação da saúde mental no trabalho, Shadow AI e governança de IA, e o radar de notícias da semana." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0f1923;
+      --navy2:  #1a2535;
+      --ouro:   #C8A84B;
+      --ouro2:  rgba(200,168,75,0.15);
+      --texto:  #e8e8e8;
+      --sub:    rgba(255,255,255,0.6);
+      --borda:  1px solid rgba(200,168,75,0.3);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--navy);
+      color: var(--texto);
+      font-family: 'Barlow', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px 16px;
+    }
+
+    .newsletter {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--navy);
+      border: var(--borda);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      background: linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%);
+      padding: 34px 30px 26px;
+      border-bottom: var(--borda);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-mark {
+      flex: 0 0 auto;
+      width: 70px;
+      height: 70px;
+      background: #f5f0e4;
+      border: 1.5px solid var(--ouro);
+      border-radius: 16px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    }
+    .logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .header-brand h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.05rem;
+      letter-spacing: 1.5px;
+      color: var(--texto);
+      line-height: 1;
+    }
+    .header-brand span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ouro);
+    }
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 16px;
+      margin-top: 22px;
+    }
+    .edition-badge {
+      background: var(--ouro);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.74rem;
+      letter-spacing: 0.5px;
+      padding: 5px 14px;
+      border-radius: 40px;
+      text-transform: uppercase;
+    }
+    .edition-date {
+      font-size: 0.8rem;
+      color: var(--sub);
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- TOC ---------- */
+    .toc {
+      padding: 22px 30px;
+      background: rgba(200,168,75,0.05);
+      border-bottom: var(--borda);
+    }
+    .toc-label {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      color: var(--ouro);
+      margin-bottom: 8px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li {
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-list a {
+      color: var(--texto);
+      text-decoration: none;
+      font-size: 0.92rem;
+      display: flex;
+      gap: 10px;
+      transition: color 0.2s;
+    }
+    .toc-list a::before { content: "→"; color: var(--ouro); }
+    .toc-list a:hover { color: var(--ouro); }
+
+    /* ---------- INTRO ---------- */
+    .intro {
+      padding: 28px 30px 8px;
+    }
+    .intro p {
+      font-size: 1.04rem;
+      color: var(--texto);
+      margin-bottom: 14px;
+    }
+    .intro p:first-child::first-letter {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.1rem;
+      color: var(--ouro);
+      float: left;
+      line-height: 0.8;
+      margin: 6px 10px 0 0;
+    }
+
+    /* ---------- CONTENT SECTIONS ---------- */
+    .content-section {
+      padding: 30px;
+      border-top: var(--borda);
+    }
+    .section-header { margin-bottom: 16px; }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ouro);
+      border: 1px solid var(--ouro);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.85rem;
+      letter-spacing: 0.5px;
+      color: var(--texto);
+      line-height: 1.1;
+    }
+    .toggle-preview p {
+      font-size: 1.0rem;
+      color: var(--texto);
+      margin-bottom: 16px;
+    }
+    .toggle-btn {
+      background: transparent;
+      border: 1px solid var(--ouro);
+      color: var(--ouro);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 0.84rem;
+      letter-spacing: 0.5px;
+      padding: 9px 18px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toggle-btn:hover {
+      background: var(--ouro);
+      color: var(--navy);
+    }
+    .collapsible-inner { margin-top: 20px; }
+    .collapsible-inner h3 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 1.08rem;
+      color: var(--ouro);
+      margin: 22px 0 8px;
+    }
+    .collapsible-inner h3:first-child { margin-top: 0; }
+    .collapsible-inner p {
+      font-size: 0.98rem;
+      color: var(--texto);
+      margin-bottom: 12px;
+    }
+    .collapsible-inner p strong { color: #fff; font-weight: 600; }
+
+    /* ---------- NEWS ---------- */
+    .news-grid { display: grid; gap: 16px; }
+    .news-item {
+      background: var(--navy2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-left: 3px solid var(--ouro);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .news-source {
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ouro);
+      font-weight: 600;
+    }
+    .news-item h4 {
+      margin: 6px 0 8px;
+      font-size: 1.02rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .news-item h4 a {
+      color: var(--texto);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .news-item h4 a:hover { color: var(--ouro); text-decoration: underline; }
+    .news-item p {
+      font-size: 0.9rem;
+      color: var(--sub);
+    }
+
+    /* ---------- CTA ---------- */
+    .cta-box {
+      margin: 30px;
+      padding: 30px 26px;
+      background: linear-gradient(135deg, var(--ouro2) 0%, rgba(200,168,75,0.04) 100%);
+      border: var(--borda);
+      border-radius: 12px;
+      text-align: center;
+    }
+    .cta-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.5px;
+      color: var(--ouro);
+      margin-bottom: 12px;
+    }
+    .cta-box p {
+      font-size: 0.98rem;
+      color: var(--texto);
+      max-width: 520px;
+      margin: 0 auto 20px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--ouro);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 13px 32px;
+      border-radius: 40px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(200,168,75,0.3);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      padding: 28px 30px;
+      background: var(--navy2);
+      border-top: var(--borda);
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .footer-grid strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: var(--ouro);
+    }
+    .footer-grid > div p {
+      font-size: 0.82rem;
+      color: var(--sub);
+      margin-top: 2px;
+    }
+    .contact-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+    .contact-pill {
+      font-size: 0.8rem;
+      color: var(--texto);
+      text-decoration: none;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 5px 12px;
+      border-radius: 40px;
+      transition: all 0.2s;
+    }
+    .contact-pill:hover { border-color: var(--ouro); color: var(--ouro); }
+    .footer-copy {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.72rem;
+      color: var(--sub);
+      text-align: center;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 540px) {
+      body { padding: 12px 8px; }
+      .header, .toc, .intro, .content-section, .footer { padding-left: 20px; padding-right: 20px; }
+      .cta-box { margin: 22px 20px; }
+      .header-brand h1 { font-size: 1.75rem; }
+      .section-title { font-size: 1.6rem; }
+      .contact-pills { align-items: flex-start; }
+    }
+
+    /* ---------- LEITURA POR VOZ (Ouça) ---------- */
+    .audio-bar {
+      display: flex; align-items: center; flex-wrap: wrap;
+      margin: 0 0 20px; padding: 10px 12px;
+      background: rgba(200,168,75,0.07);
+      border: 1px solid rgba(200,168,75,0.25);
+      border-radius: 10px;
+    }
+    .tts-btn {
+      margin-right: 12px; background: var(--ouro); color: var(--navy); border: none;
+      font-family: 'Barlow', sans-serif; font-weight: 600;
+      font-size: 0.85rem; letter-spacing: 0.3px;
+      padding: 8px 16px; border-radius: 40px; cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .tts-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(200,168,75,0.3); }
+    .tts-btn.playing { background: transparent; color: var(--ouro); border: 1px solid var(--ouro); }
+    .tts-stop {
+      background: transparent; color: var(--sub);
+      border: 1px solid rgba(255,255,255,0.18);
+      width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+      font-size: 0.7rem; display: none; align-items: center; justify-content: center; margin-right: 12px;
+    }
+    .tts-stop:hover { color: var(--ouro); border-color: var(--ouro); }
+    .tts-stop.show { display: flex; }
+    .tts-hint { font-size: 0.72rem; color: var(--sub); letter-spacing: 0.3px; }
+
+
+
+  </style>
+</head>
+<body>
+  <article class="newsletter">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="header-top">
+        <div class="logo-mark">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIxMCAzMCA2MTAgNjEwIiB3aWR0aD0iNjkwIiBoZWlnaHQ9IjY5MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJjYXBzdWxlIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTYzMTUwIi8+PHN0b3Agb2Zmc2V0PSIwLjUiIHN0b3AtY29sb3I9IiMxZDNkNjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwZTIxMzgiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYmFzZSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFkM2Q2MiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBlMjEzOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0yNTAsMTQ4IEwyNTAsMjQ4IFEyNTAsMzAwIDMwMiwzMDAgTDM1OCwzMDAgUTQxMCwzMDAgNDEwLDI0OCBMNDEwLDE0OCBBODAsODAgMCAwIDAgMjUwLDE0OCBaIiBmaWxsPSJ1cmwoI2NhcHN1bGUpIiBzdHJva2U9IiMwZTIxMzgiIHN0cm9rZS13aWR0aD0iNCIvPjxyZWN0IHg9IjI5MS4wIiB5PSIxMDQiIHdpZHRoPSI3OCIgaGVpZ2h0PSIxMyIgcng9IjYuNSIgZmlsbD0iI2YzZWVlMSIvPjxyZWN0IHg9IjI3Ni4wIiB5PSIxMzEiIHdpZHRoPSIxMDgiIGhlaWdodD0iMTMiIHJ4PSI2LjUiIGZpbGw9IiNmM2VlZTEiLz48cmVjdCB4PSIyNjguMCIgeT0iMTU4IiB3aWR0aD0iMTI0IiBoZWlnaHQ9IjEzIiByeD0iNi41IiBmaWxsPSIjZjNlZWUxIi8+PHJlY3QgeD0iMjY4LjAiIHk9IjE4NSIgd2lkdGg9IjEyNCIgaGVpZ2h0PSIxMyIgcng9IjYuNSIgZmlsbD0iI2YzZWVlMSIvPjxyZWN0IHg9IjI2OC4wIiB5PSIyMTIiIHdpZHRoPSIxMjQiIGhlaWdodD0iMTMiIHJ4PSI2LjUiIGZpbGw9IiNmM2VlZTEiLz48cmVjdCB4PSIyNzYuMCIgeT0iMjM5IiB3aWR0aD0iMTA4IiBoZWlnaHQ9IjEzIiByeD0iNi41IiBmaWxsPSIjZjNlZWUxIi8+PHJlY3QgeD0iMjkxLjAiIHk9IjI2NiIgd2lkdGg9Ijc4IiBoZWlnaHQ9IjEzIiByeD0iNi41IiBmaWxsPSIjZjNlZWUxIi8+PGNpcmNsZSBjeD0iMzMwLjAiIGN5PSIxODYiIHI9IjE5IiBmaWxsPSIjZjNlZWUxIi8+PGNpcmNsZSBjeD0iMzMwLjAiIGN5PSIxODYiIHI9IjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwZTIxMzgiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjMzMC4wIiBjeT0iMTg2IiByPSI2LjUiIGZpbGw9IiMxNjMxNTAiLz48Y2lyY2xlIGN4PSIyNDgiIGN5PSIxODgiIHI9IjEzIiBmaWxsPSIjMGUyMTM4Ii8+PGNpcmNsZSBjeD0iNDEyIiBjeT0iMTg4IiByPSIxMyIgZmlsbD0iIzBlMjEzOCIvPjxwYXRoIGQ9Ik0yNDgsMTg4IEMyMjAsMjcyIDI1MCwzNTIgMzMwLjAsMzYyIEM0MTAsMzUyIDQ0MCwyNzIgNDEyLDE4OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTYzMTUwIiBzdHJva2Utd2lkdGg9IjE3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIzMTUuMCIgeT0iMzU2IiB3aWR0aD0iMzAiIGhlaWdodD0iNjAiIHJ4PSI1IiBmaWxsPSJ1cmwoI2Jhc2UpIi8+PGVsbGlwc2UgY3g9IjMzMC4wIiBjeT0iNDE2IiByeD0iNjYiIHJ5PSIxNyIgZmlsbD0iIzE2MzE1MCIvPjxlbGxpcHNlIGN4PSIzMzAuMCIgY3k9IjQzOCIgcng9IjEwMCIgcnk9IjI3IiBmaWxsPSJ1cmwoI2Jhc2UpIi8+PGVsbGlwc2UgY3g9IjMzMC4wIiBjeT0iNDMyIiByeD0iOTIiIHJ5PSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjNlZWUxIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iMC41NSIvPjxnIHRyYW5zZm9ybT0icm90YXRlKC03IDY2NSAzMDApIj48cmVjdCB4PSI1NjAiIHk9IjE2OCIgd2lkdGg9IjIxMiIgaGVpZ2h0PSIyNzYiIHJ4PSIxMiIgZmlsbD0iI2ZiZjdlZSIgc3Ryb2tlPSIjMTYzMTUwIiBzdHJva2Utd2lkdGg9IjYiLz48bGluZSB4MT0iNTg0IiB5MT0iMjI4IiB4Mj0iNzQ4IiB5Mj0iMjI4IiBzdHJva2U9IiM5YjJhMmUiIHN0cm9rZS13aWR0aD0iMy4yIiBvcGFjaXR5PSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iNTg0IiB5MT0iMjY0IiB4Mj0iNzQ4IiB5Mj0iMjY0IiBzdHJva2U9IiMxNjMxNTAiIHN0cm9rZS13aWR0aD0iMy4yIiBvcGFjaXR5PSIwLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI1ODQiIHkxPSIzMDAiIHgyPSI3NDgiIHkyPSIzMDAiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSIzLjIiIG9wYWNpdHk9IjAuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjU4NCIgeTE9IjMzNiIgeDI9Ijc0OCIgeTI9IjMzNiIgc3Ryb2tlPSIjMTYzMTUwIiBzdHJva2Utd2lkdGg9IjMuMiIgb3BhY2l0eT0iMC42IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iNTg0IiB5MT0iMzcyIiB4Mj0iNzQ4IiB5Mj0iMzcyIiBzdHJva2U9IiMxNjMxNTAiIHN0cm9rZS13aWR0aD0iMy4yIiBvcGFjaXR5PSIwLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI1ODQiIHkxPSI0MDgiIHgyPSI3NDgiIHkyPSI0MDgiIHN0cm9rZT0iIzliMmEyZSIgc3Ryb2tlLXdpZHRoPSIzLjIiIG9wYWNpdHk9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxlbGxpcHNlIGN4PSI1ODQuMCIgY3k9IjE2OCIgcng9IjkiIHJ5PSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTYzMTUwIiBzdHJva2Utd2lkdGg9IjYiLz48ZWxsaXBzZSBjeD0iNjE2LjgiIGN5PSIxNjgiIHJ4PSI5IiByeT0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PGVsbGlwc2UgY3g9IjY0OS42IiBjeT0iMTY4IiByeD0iOSIgcnk9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxNjMxNTAiIHN0cm9rZS13aWR0aD0iNiIvPjxlbGxpcHNlIGN4PSI2ODIuNCIgY3k9IjE2OCIgcng9IjkiIHJ5PSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTYzMTUwIiBzdHJva2Utd2lkdGg9IjYiLz48ZWxsaXBzZSBjeD0iNzE1LjIiIGN5PSIxNjgiIHJ4PSI5IiByeT0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PGVsbGlwc2UgY3g9Ijc0OC4wIiBjeT0iMTY4IiByeD0iOSIgcnk9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxNjMxNTAiIHN0cm9rZS13aWR0aD0iNiIvPjxyZWN0IHg9IjU2MiIgeT0iMTcwIiB3aWR0aD0iMjA4IiBoZWlnaHQ9IjIyIiBmaWxsPSIjZmJmN2VlIi8+PHBhdGggZD0iTTU3NS4wLDE2OCBBOSwyMCAwIDAgMSA1OTMuMCwxNjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTYwNy44LDE2OCBBOSwyMCAwIDAgMSA2MjUuOCwxNjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTY0MC42LDE2OCBBOSwyMCAwIDAgMSA2NTguNiwxNjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTY3My40LDE2OCBBOSwyMCAwIDAgMSA2OTEuNCwxNjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTcwNi4yLDE2OCBBOSwyMCAwIDAgMSA3MjQuMiwxNjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTczOS4wLDE2OCBBOSwyMCAwIDAgMSA3NTcuMCwxNjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE2MzE1MCIgc3Ryb2tlLXdpZHRoPSI2Ii8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYwMiw1NDgpIHJvdGF0ZSgtMzUpIj48cmVjdCB4PSIwIiB5PSItMTQiIHdpZHRoPSIxOTYiIGhlaWdodD0iMjgiIHJ4PSIzIiBmaWxsPSIjMTYzMTUwIi8+PHJlY3QgeD0iMCIgeT0iLTE0IiB3aWR0aD0iMTk2IiBoZWlnaHQ9IjgiIHJ4PSIzIiBmaWxsPSIjMjc0OTZlIi8+PHJlY3QgeD0iMCIgeT0iNyIgd2lkdGg9IjE5NiIgaGVpZ2h0PSI3IiBmaWxsPSIjMGUyMTM4Ii8+PHJlY3QgeD0iMTk2IiB5PSItMTQiIHdpZHRoPSIxNiIgaGVpZ2h0PSIyOCIgZmlsbD0iI2M5YjI3YSIvPjxyZWN0IHg9IjE5NiIgeT0iLTE0IiB3aWR0aD0iMTYiIGhlaWdodD0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBlMjEzOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48bGluZSB4MT0iMjAxIiB5MT0iLTE0IiB4Mj0iMjAxIiB5Mj0iMTQiIHN0cm9rZT0iIzBlMjEzOCIgc3Ryb2tlLXdpZHRoPSIxLjIiLz48bGluZSB4MT0iMjA3IiB5MT0iLTE0IiB4Mj0iMjA3IiB5Mj0iMTQiIHN0cm9rZT0iIzBlMjEzOCIgc3Ryb2tlLXdpZHRoPSIxLjIiLz48cmVjdCB4PSIyMTIiIHk9Ii0xNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iIzliMmEyZSIvPjxwYXRoIGQ9Ik0wLC0xNCBMMCwxNCBMLTMyLDAgWiIgZmlsbD0iI2YzZWVlMSIgc3Ryb2tlPSIjMGUyMTM4IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGQ9Ik0tMzIsMCBMLTE5LC02IEwtMTksNiBaIiBmaWxsPSIjMGUyMTM4Ii8+PC9nPjwvc3ZnPg==" alt="Maxitraining em Pauta — microfone e bloco de pauta" />
+        </div>
+        <div class="header-brand">
+          <h1>Maxitraining em Pauta</h1>
+          <span>Educação · Liderança · Desenvolvimento</span>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="edition-badge">Edição Nº 55</span>
+        <span class="edition-date">26 Jun 2026 &nbsp;·&nbsp; Publicação Semanal</span>
+      </div>
+    </header>
+
+    <!-- ===== TOC ===== -->
+    <nav class="toc">
+      <p class="toc-label">Nesta edição</p>
+      <ul class="toc-list">
+        <li><a href="#artigo-principal">NR-1 e Riscos Psicossociais: O Novo Mandato da Saúde Mental no Trabalho</a></li>
+        <li><a href="#secao2">Tecnologia — Shadow AI: A IA que Sua Empresa Não Aprovou</a></li>
+        <li><a href="#secao3">Notícias — No Radar desta Semana</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== INTRO ===== -->
+    <section class="intro">
+      <p>A saúde mental das equipes deixou de ser um tema de bem-estar para se tornar uma obrigação de gestão — e a NR-1 atualizada coloca essa pauta no centro da estratégia de qualquer empresa brasileira. Nesta edição, mostramos por que isso é, antes de tudo, um desafio de liderança.</p>
+      <p>Na tecnologia, falamos do fenômeno que já está dentro da sua operação mesmo que você não veja: a <strong>Shadow AI</strong>. E fechamos com o radar de notícias que todo gestor deveria acompanhar.</p>
+    </section>
+
+    <!-- ===== SEÇÃO 1 — ARTIGO PRINCIPAL ===== -->
+    <section id="artigo-principal" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Artigo Principal</span>
+        <h2 class="section-title">NR-1 e Riscos Psicossociais: O Novo Mandato da Saúde Mental no Trabalho</h2>
+      </div>
+
+      <div class="toggle-preview">
+        <p>A mente das equipes saiu do campo do "benefício" e entrou no terreno da obrigação legal. Com a atualização da NR-1, as empresas brasileiras passam a ter de identificar e gerenciar riscos psicossociais com o mesmo rigor aplicado aos riscos físicos. A pergunta deixou de ser <em>se</em> agir — e passou a ser <em>como</em>.</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Leia o artigo completo ↓</button>
+
+      <div class="collapsible-inner" style="display:none">
+            <div class="audio-bar">
+              <button type="button" class="tts-btn" onclick="ttsToggle(this)">🔊 Ouça a matéria</button>
+              <button type="button" class="tts-stop" onclick="ttsStop()" aria-label="Parar" title="Parar">⏹</button>
+              <span class="tts-hint">Leitura por voz · pt-BR</span>
+            </div>
+        <h3>O que muda na prática</h3>
+        <p>A NR-1 atualizada incorpora os riscos psicossociais ao Gerenciamento de Riscos Ocupacionais. Na prática, isso significa que fatores como sobrecarga crônica, metas inalcançáveis, pressão abusiva, assédio, falta de autonomia e jornadas exaustivas precisam ser <strong>mapeados, registrados e tratados</strong> dentro do Programa de Gerenciamento de Riscos. Não é um documento que se arquiva: é um ciclo contínuo de identificação, ação e monitoramento. E, com a fiscalização ganhando corpo em 2026, a inércia passou a ter custo real.</p>
+
+        <h3>Por que isso é um tema de liderança — não só de SST</h3>
+        <p>Aqui está o ponto que muitas empresas ignoram: o ambiente que gera ou neutraliza o risco psicossocial é construído todos os dias pela liderança. É o gestor quem distribui a carga de trabalho, define a clareza das metas, dá (ou não) feedback, reconhece esforços e modela a forma como o erro é tratado. Segundo dados recentes, os transtornos mentais já figuram entre as principais causas de afastamento no Brasil — e raramente a origem está apenas no indivíduo. Tratar riscos psicossociais como assunto exclusivo do setor de segurança do trabalho é terceirizar um problema que nasce na gestão.</p>
+
+        <h3>O custo invisível de ignorar</h3>
+        <p>Ambientes psicologicamente nocivos cobram um preço que nem sempre aparece na planilha: afastamentos prolongados, rotatividade elevada, presenteísmo (o colaborador presente, mas improdutivo) e queda na qualidade das entregas. Estudos recentes estimam que cada afastamento por questões emocionais gera custos diretos e indiretos muito superiores ao salário do profissional. Soma-se a isso o risco jurídico e reputacional de uma empresa flagrada sem gestão adequada desses fatores.</p>
+
+        <h3>Do compliance à cultura</h3>
+        <p>Há um risco real de a NR-1 virar apenas mais um checklist — formulários preenchidos para satisfazer a fiscalização, sem mudança alguma no dia a dia. Mas a gestão genuína do risco psicossocial exige <strong>líderes preparados</strong>: capazes de reconhecer sinais de esgotamento, conduzir conversas difíceis com empatia, equilibrar a carga das equipes e transformar feedback em desenvolvimento, não em punição. É a diferença entre cumprir a norma e construir um ambiente onde as pessoas conseguem, de fato, performar.</p>
+
+        <h3>Conclusão</h3>
+        <p>A NR-1 não pede apenas novos documentos — ela pede uma nova postura de liderança. Empresas que enxergarem esse momento como oportunidade, e não como burocracia, sairão na frente em retenção, engajamento e resultado. Desenvolver gestores prontos para liderar com saúde e clareza deixou de ser desejável: tornou-se estratégico. E é exatamente nesse ponto que a MaxiTraining apoia organizações que querem ir além do mínimo legal.</p>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO 2 — TECNOLOGIA ===== -->
+    <section id="secao2" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Tecnologia</span>
+        <h2 class="section-title">Shadow AI: A Inteligência Artificial que Sua Empresa Não Aprovou</h2>
+      </div>
+
+      <div class="toggle-preview">
+        <p>Seu time já está usando IA — possivelmente com dados sensíveis, em ferramentas que ninguém aprovou e que ninguém audita. Isso tem nome: <strong>Shadow AI</strong>. E proibir não resolve.</p>
+      </div>
+
+      <button class="toggle-btn" onclick="toggleSection(this)">Continuar lendo ↓</button>
+
+      <div class="collapsible-inner" style="display:none">
+            <div class="audio-bar">
+              <button type="button" class="tts-btn" onclick="ttsToggle(this)">🔊 Ouça a matéria</button>
+              <button type="button" class="tts-stop" onclick="ttsStop()" aria-label="Parar" title="Parar">⏹</button>
+              <span class="tts-hint">Leitura por voz · pt-BR</span>
+            </div>
+        <p>A Shadow AI é a versão atualizada do velho "Shadow IT": colaboradores que adotam ferramentas de inteligência artificial por conta própria, sem passar pela TI, pela segurança ou pelo jurídico. Contratos, relatórios financeiros, dados de clientes e código proprietário acabam colados em prompts de ChatGPT, Gemini ou Claude — em sessões que a empresa não vê, não registra e não controla. Levantamentos recentes apontam que cerca de <strong>69% das organizações</strong> já detectam ou suspeitam desse uso, e que quase metade dos profissionais admite ter inserido informações não públicas nessas ferramentas.</p>
+
+        <p>O instinto da maioria dos gestores é o mesmo: bloquear. Mas a evidência é consistente — quando a empresa apenas proíbe, sem oferecer alternativa, o uso não desaparece: ele migra para o celular pessoal, a rede de casa, o lugar onde ninguém enxerga. Proibir torna o risco invisível, não inexistente. A saída que funciona combina três frentes: política clara sobre o que pode ou não ser inserido, um catálogo de ferramentas aprovadas tão boas quanto as "da sombra", e capacitação contínua das equipes.</p>
+
+        <p>Para RH e lideranças, a lição vai além da infraestrutura. A Shadow AI não é, no fundo, um problema de tecnologia — é um problema de <strong>governança e cultura</strong>. Pessoas buscam o caminho mais fácil para entregar; cabe à organização tornar o caminho seguro também o mais conveniente. Quem estrutura isso agora decide como a IA opera na empresa. Quem espera, descobre depois o que já estava rodando — e reage, em vez de liderar.</p>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO 3 — NOTÍCIAS ===== -->
+    <section id="secao3" class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Notícias</span>
+        <h2 class="section-title">No Radar desta Semana</h2>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-item">
+          <span class="news-source">Deloitte</span>
+          <h4><a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" target="_blank" rel="noopener">Brasil se destaca no uso estratégico de IA, aponta "State of AI 2026"</a></h4>
+          <p>O relatório global da Deloitte mostra que 42% das empresas brasileiras já empregam IA de forma transformadora — acima da média mundial de 34%. A IA deixa a fase de experimentação, e o desafio agora é escalar os pilotos com resultados concretos, não apenas testar.</p>
+        </article>
+
+        <article class="news-item">
+          <span class="news-source">iMasters · Gartner</span>
+          <h4><a href="https://imasters.com.br/cloud/shadow-ai-69-das-empresas-ja-detectam-uso-de-ia-em-ferramentas-nao-autorizadas-segundo-gartner" target="_blank" rel="noopener">Shadow AI: 69% das empresas já detectam uso não autorizado de IA</a></h4>
+          <p>Dados sigilosos circulam por ferramentas públicas de IA sem rastreabilidade nem controle. Segundo o Gartner, proibir não resolve — quando não há alternativa aprovada, o uso apenas se torna mais invisível. A recomendação é organizar o uso com governança definida.</p>
+        </article>
+
+        <article class="news-item">
+          <span class="news-source">Jornal Empresas &amp; Negócios</span>
+          <h4><a href="https://jornalempresasenegocios.com.br/tecnologia/ferramentas-de-ia-podem-trazer-riscos-para-a-ciberseguranca-de-empresas/" target="_blank" rel="noopener">Ferramentas de IA ampliam riscos de cibersegurança nas empresas</a></h4>
+          <p>Especialistas alertam que cerca de 97% dos vazamentos de dados envolvendo IA ocorrem por falta de controles de acesso adequados. A recomendação é tratar segurança "desde o design", com governança, monitoramento contínuo e capacitação das equipes no uso responsável.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA — Opção B: Mentoria em Apresentação & Oratória ===== -->
+    <section class="cta-box">
+      <h3>Fale com Impacto. Lidere com Presença.</h3>
+      <p>A MaxiTraining oferece mentoria especializada em Técnicas de Apresentação e Oratória para executivos e equipes. Desenvolva a comunicação que transforma audiências — em reuniões, apresentações ou palcos corporativos.</p>
+      <a href="https://wa.me/5521996861009" class="cta-btn" target="_blank" rel="noopener">Fale Conosco</a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <strong>MaxiTraining</strong>
+          <p>Consultoria em RH e Desenvolvimento Corporativo</p>
+        </div>
+        <div class="contact-pills">
+          <a href="mailto:hilber@maxitraining.com.br" class="contact-pill">✉ hilber@maxitraining.com.br</a>
+          <a href="https://maxitraining.com.br" class="contact-pill" target="_blank" rel="noopener">🌐 maxitraining.com.br</a>
+          <a href="https://linkedin.com/company/maxitraining" class="contact-pill" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 MaxiTraining · Todos os direitos reservados · Para cancelar o recebimento, responda com "Remover"</p>
+    </footer>
+
+  </article>
+
+  <script>
+    function toggleSection(btn) {
+      const content = btn.nextElementSibling;
+      const isOpen = content.style.display !== 'none';
+      content.style.display = isOpen ? 'none' : 'block';
+      const isMain = btn.closest('#artigo-principal');
+      if (isOpen) {
+        btn.textContent = isMain ? 'Leia o artigo completo ↓' : 'Continuar lendo ↓';
+      } else {
+        btn.textContent = 'Fechar ↑';
+      }
+    }
+  </script>
+
+  <script>
+  (function () {
+    const synth = window.speechSynthesis;
+    let voice = null, chunks = [], idx = 0, activeBtn = null, state = 'idle';
+
+    function pickVoice() {
+      const vs = synth ? synth.getVoices() : [];
+      if (!vs.length) return null;
+      const pt = vs.filter(v => /^pt/i.test(v.lang));
+      const fem = /(luciana|maria|francisca|fernanda|helo|joana|cam|vit[oó]ria|female|feminin|mulher|google portugu)/i;
+      return pt.find(v => fem.test(v.name)) || pt.find(v => /pt-?BR/i.test(v.lang)) || pt[0] || vs[0];
+    }
+    if (synth) { try { synth.getVoices(); } catch (e) {} synth.onvoiceschanged = () => { voice = pickVoice(); }; }
+
+    function gatherText(section) {
+      const c = section.cloneNode(true);
+      c.querySelectorAll('.audio-bar, .toggle-btn, .section-tag').forEach(e => e.remove());
+      const t = c.querySelector('.section-title');
+      const title = t ? t.textContent.trim() : '';
+      if (t) t.remove();
+      const body = c.textContent.replace(/\s+/g, ' ').trim();
+      return (title ? title + '. ' : '') + body;
+    }
+    function splitChunks(text) {
+      const sents = text.match(/[^.!?…]+[.!?…]*/g) || [text];
+      const out = []; let buf = '';
+      for (const s of sents) {
+        if ((buf + s).length > 180) { if (buf) out.push(buf.trim()); buf = s; }
+        else buf += s;
+      }
+      if (buf.trim()) out.push(buf.trim());
+      return out;
+    }
+    function speakNext() {
+      if (idx >= chunks.length) { finish(); return; }
+      const u = new SpeechSynthesisUtterance(chunks[idx]);
+      if (!voice) voice = pickVoice();
+      if (voice) u.voice = voice;
+      u.lang = 'pt-BR'; u.rate = 0.98; u.pitch = 1.0;
+      u.onend = () => { if (state === 'playing') { idx++; speakNext(); } };
+      u.onerror = () => { if (state === 'playing') { idx++; speakNext(); } };
+      synth.speak(u);
+    }
+    function resetUI() {
+      document.querySelectorAll('.tts-btn').forEach(b => { b.textContent = '🔊 Ouça a matéria'; b.classList.remove('playing'); });
+      document.querySelectorAll('.tts-stop').forEach(b => b.classList.remove('show'));
+    }
+    function finish() { state = 'idle'; activeBtn = null; resetUI(); }
+
+    window.ttsStop = function () { if (synth) synth.cancel(); finish(); };
+
+    window.ttsToggle = function (btn) {
+      if (!synth || !('SpeechSynthesisUtterance' in window)) {
+        alert('Seu navegador não suporta leitura por voz. Tente o Chrome, Edge ou Safari atualizados.');
+        return;
+      }
+      if (activeBtn === btn && state === 'playing') { synth.pause(); state = 'paused'; btn.textContent = '▶ Retomar'; return; }
+      if (activeBtn === btn && state === 'paused') { synth.resume(); state = 'playing'; btn.textContent = '⏸ Pausar'; return; }
+      synth.cancel(); resetUI();
+      const section = btn.closest('section');
+      chunks = splitChunks(gatherText(section)); idx = 0; activeBtn = btn; state = 'playing';
+      btn.textContent = '⏸ Pausar'; btn.classList.add('playing');
+      const stop = btn.parentElement.querySelector('.tts-stop'); if (stop) stop.classList.add('show');
+      if (!voice) voice = pickVoice();
+      speakNext();
+    };
+
+    window.addEventListener('beforeunload', () => { if (synth) synth.cancel(); });
+  })();
+  </script>
+</body>
+</html>
